@@ -1,11 +1,11 @@
 import React from "react";
 import "./App.css";
-import { Button } from "@mantine/core";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
-    <div className="App">
-      <Button>lol</Button>
+    <div>
+      <Navbar />
     </div>
   );
 }
