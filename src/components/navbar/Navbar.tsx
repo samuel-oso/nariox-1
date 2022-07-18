@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import logo from "../images/logo.png";
-import user from "../images/user.png";
-import user2 from "../images/user2.jpg";
-import user3 from "../images/user3.jpg";
-import messenger from "../images/messenger.png";
+import "../navbar/Navbar.css";
+import logo from "../../images/logo.png";
+import user from "../../images/user.png";
 import { FiSettings } from "react-icons/fi";
 import { AiOutlineMenu } from "react-icons/ai";
 import { FiSearch } from "react-icons/fi";
@@ -14,7 +12,7 @@ import { RiArrowDownSLine } from "react-icons/ri";
 import { RiFullscreenFill } from "react-icons/ri";
 import { AiOutlineAppstore } from "react-icons/ai";
 import { FiGlobe } from "react-icons/fi";
-// import navNotificationcontent from "../data/data";
+import { navContent } from "../../data/data";
 
 const Navbar = () => {
   const [search, setSearch] = useState(false);
@@ -70,65 +68,44 @@ const Navbar = () => {
           <FiSettings />
         </div>
       </div>
+
+      {/* search Collapse */}
       <Collapse in={search}>
-        <div className="navCollapse">
+        <div className="navCollapse-Mobile">
           <Input placeholder="Search..." />
         </div>
       </Collapse>
-      <Collapse in={notification}>
+
+      {/* Notification Collapse */}
+      <Collapse in={notification} className="navNotificationCard">
         <div className="navNotification flex-col">
-          <div
-            style={{ border: "none" }}
-            className="navNotificationcontent justify-between"
-          >
+          <div className="navNotificationSticky top-0 justify-between">
             <h4 className="text-base font-medium">Notification</h4>
-            <p>clear All</p>
+            <p
+              className="cursor-pointer"
+              onClick={() => setNotification((o) => !o)}
+            >
+              clear All
+            </p>
           </div>
           <div className="navNotificationcontent">
-            <img src={user2} />
-            <div className="mx-3">
-              <h3>Micheal Davis</h3>
-              <p className="text-xs my-1">
-                Hello, Hope you are well? Please don't forget the meeting!
-              </p>
-            </div>
+            {navContent.map((props) => {
+              return (
+                <div className="navNotificationList">
+                  <img src={props.img} />
+                  <div className="mx-3">
+                    <h3>{props.h3}</h3>
+                    <p>{props.p}</p>
+                  </div>
+                </div>
+              );
+            })}
           </div>
-          <div className="navNotificationcontent">
-            <img src={messenger} />
-            <div className="mx-3">
-              <h3>Adesuwa liked your post</h3>
-              <p className="text-xs my-1">15 mins ago</p>
-            </div>
-          </div>
-          <div className="navNotificationcontent">
-            <img src={user3} />
-            <div className="mx-3">
-              <h3>Olumide Jonathan</h3>
-              <p className="text-xs my-1">
-                Awesome layout! See you at the top man.
-              </p>
-            </div>
-          </div>
-          <div className="navNotificationcontent">
-            <img src={messenger} />
-            <div className="mx-3">
-              <h3>Adesuwa liked your post</h3>
-              <p className="text-xs my-1">15 mins ago</p>
-            </div>
-          </div>
-          <div className="navNotificationcontent">
-            <img src={messenger} />
-            <div className="mx-3">
-              <h3>Adesuwa liked your post</h3>
-              <p className="text-xs my-1">15 mins ago</p>
-            </div>
-          </div>
-          <div className="navNotificationcontent">
-            <img src={messenger} />
-            <div className="mx-3">
-              <h3>Adesuwa liked your post</h3>
-              <p className="text-xs my-1">15 mins ago</p>
-            </div>
+          <div
+            onClick={() => setNotification((o) => !o)}
+            className="navNotificationSticky justify-center cursor-pointer"
+          >
+            <p style={{ color: "var(--bs-primary)" }}>View All</p>
           </div>
         </div>
       </Collapse>
