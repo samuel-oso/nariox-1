@@ -18,6 +18,10 @@
 .navList svg {
   width: 20px;
   height: 20px;
+  cursor: pointer;
+}
+.navList svg:hover {
+  color: var(--bs-primary);
 }
 .navHome {
   height: 70px;
@@ -60,10 +64,12 @@
   margin: auto;
   padding: 20px;
   border-radius: 5px;
+  height: 70px;
 }
 .navCollapse-Mobile input {
   padding: 7px 14px;
   width: 78vw;
+  height: 32px;
   color: var(--bs-gray-300);
 }
 .navNotification {
@@ -74,9 +80,17 @@
   box-shadow: var(--box-shadow);
   max-height: 330px;
   max-width: 95%;
-  overflow: auto;
+  overflow: auto !important;
   border-radius: 5px;
   margin: 0 auto;
+}
+.navNotificationCard::-webkit-scrollbar {
+  width: 5px;
+  background-color: var(--bg-gray-100);
+}
+.navNotificationCard::-webkit-scrollbar-thumb {
+  background-color: var(--bg-gray-200);
+  border-radius: 5px;
 }
 .navNotificationSticky {
   display: flex;
@@ -116,8 +130,95 @@
   display: flex;
   align-items: center;
 }
-.navNotificationcontent :hover {
+.navNotificationcontent :hover,
+.navAppcol :hover,
+.navLanguageCard :hover,
+.navProfileList:hover,
+.navCreateList:hover {
   background-color: var(--bg-gray-100);
+}
+.navAppcol:hover p {
+  color: var(--bs-primary);
+}
+.navApplicationCard {
+  box-shadow: var(--box-shadow);
+  border-radius: 5px;
+  width: 320px;
+  position: absolute;
+  inset: 0px 0px auto auto;
+  transform: translate3d(-300px, 72px, 0px);
+  padding: 6px;
+}
+.navApplicationCard img {
+  width: 24px;
+  display: block;
+  justify-content: center;
+  margin: 0 auto;
+}
+.navApplicationCard p {
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--bs-gray-400);
+  margin-top: 4px;
+}
+.navLanguageCard {
+  padding: 4px 0;
+  box-shadow: var(--box-shadow);
+  width: 160px;
+  position: absolute;
+  inset: 0px 0px auto auto;
+  transform: translate3d(-270px, 72px, 0px);
+  border-radius: 5px;
+}
+.navLang {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--white);
+  cursor: pointer;
+  padding: 6px 20px;
+}
+.navLang img {
+  width: 18px;
+  height: 12px;
+}
+.navLang p {
+  font-size: 12px;
+  color: var(--bs-gray-400);
+}
+.navProfile {
+  padding: 4px 0;
+  box-shadow: var(--box-shadow);
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 5px;
+  background-color: var(--white);
+}
+.navProfile h3 {
+  padding: 15px 20px;
+  color: var(--bs-gray-dark);
+  font-weight: 500;
+  font-size: 14.5px;
+}
+.navProfileList {
+  padding: 7px 20px;
+  display: flex;
+  align-items: center;
+  color: var(--bs-gray-400);
+  gap: 7px;
+  width: 100%;
+  cursor: pointer;
+}
+.navDivider {
+  height: 0;
+  margin: 0.75rem 0;
+  overflow: hidden;
+  border-top: 1px solid #e2e7f1;
+}
+.navCreate {
+  display: none;
 }
 @media (min-width: 375px) {
   .navList {
@@ -133,11 +234,15 @@
   }
   .navNotificationCard {
     max-width: 330px;
-  }
-  .navNotificationCard {
     position: absolute;
     inset: 0px 0px auto auto;
     transform: translate3d(-230px, 72px, 0px);
+  }
+  .navProfile {
+    max-width: 170px;
+    position: absolute;
+    inset: 0px 0px auto auto;
+    transform: translate3d(-45px, 72px, 0px);
   }
 }
 @media (min-width: 992px) {
@@ -155,5 +260,34 @@
   }
   .navCollapse-Mobile {
     display: none;
+  }
+  @media (min-width: 1200px) {
+    .createNew {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      gap: 5px;
+      height: 70px;
+      color: var(--bs-gray-dark);
+      margin-left: 10px;
+      position: relative;
+    }
+    .navCreate {
+      display: block;
+      padding: 4px 0;
+      box-shadow: var(--box-shadow);
+      margin: 0 auto;
+      border-radius: 5px;
+      position: absolute;
+      inset: 0px auto auto 0px;
+      transform: translate3d(105px, 72px, 0px);
+    }
+    .navCreateList {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      cursor: pointer;
+      padding: 6px 20px;
+    }
   }
 }

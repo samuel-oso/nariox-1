@@ -5,6 +5,19 @@ import messenger from "../images/messenger.png";
 import newUser from "../images/newUser.png";
 import thumbsUp from "../images/thumbsUp.png";
 
+import slack from "../../src/images/slack.png";
+import dropbox from "../../src/images/dropbox.png";
+import bitbucket from "../../src/images/bitbucket.png";
+import dribble from "../../src/images/dribble.png";
+import gsuite from "../../src/images/gsuite.png";
+import github from "../../src/images/github.png";
+
+import english from "../../src/images/english.jpg";
+import russian from "../../src/images/russian.jpg";
+import italian from "../../src/images/italian.jpg";
+import german from "../../src/images/german.jpg";
+import spanish from "../../src/images/spanish.jpg";
+
 export const navContent = [
   {
     img: user2,
@@ -35,5 +48,55 @@ export const navContent = [
     img: messenger,
     h3: "Adris commented on Admin",
     p: "13 secs ago",
+  },
+];
+
+export const navApplication = [
+  {
+    img: slack,
+    p: "Slack",
+  },
+  {
+    img: dropbox,
+    p: "Dropbox",
+  },
+  {
+    img: bitbucket,
+    p: "Bitbucket",
+  },
+  {
+    img: dribble,
+    p: "Dribble",
+  },
+  {
+    img: gsuite,
+    p: "G suite",
+  },
+  {
+    img: github,
+    p: "Github",
+  },
+];
+
+export const navLanguage = [
+  {
+    img: english,
+    p: "English",
+  },
+  {
+    img: russian,
+    p: "Russian",
+  },
+  {
+    img: italian,
+    p: "Italian",
+  },
+  {
+    img: german,
+    p: "German",
+  },
+  {
+    img: spanish,
+    p: "Spanish",
   },
 ];
