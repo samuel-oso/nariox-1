@@ -7,6 +7,7 @@
   border-bottom: 1px solid var(--gray);
   height: 70px;
   position: relative;
+  z-index: 1001;
 }
 .navList {
   display: flex;
@@ -19,6 +20,7 @@
   width: 20px;
   height: 20px;
   cursor: pointer;
+  fill: var(--svg-fill);
 }
 .navList svg:hover {
   color: var(--bs-primary);
@@ -32,8 +34,8 @@
   border-right: 1px solid var(--gray);
 }
 .navHome img {
-  width: 30px;
-  height: 30px;
+  width: 17px;
+  height: 25px;
 }
 .navNotificationIcon {
   display: flex;
@@ -215,7 +217,7 @@
   height: 0;
   margin: 0.75rem 0;
   overflow: hidden;
-  border-top: 1px solid #e2e7f1;
+  border-top: 1px solid var(--gray);
 }
 .navCreate {
   display: none;
@@ -257,6 +259,7 @@
   }
   .navSearch svg {
     color: var(--bg-gray-200);
+    fill: none;
   }
   .navCollapse-Mobile {
     display: none;
@@ -288,6 +291,17 @@
       gap: 7px;
       cursor: pointer;
       padding: 6px 20px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .navHome {
+      width: 250px;
+      padding: 0 24px;
+      justify-content: flex-start;
+    }
+    .navHome img {
+      width: 108px;
+      height: 25px;
     }
   }
 }

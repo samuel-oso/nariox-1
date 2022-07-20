@@ -21,10 +21,10 @@ body {
   --bg-gray-200: #c0c0c0;
   --bs-gray-300: #6c757d;
   --bs-gray-400: #4b4b5a;
+  --svg-fill: rgba(75, 75, 90, 0.12);
+  --svg-active-fill: rgba(83, 105, 248, 0.12);
   --bs-gray-dark: #343a40;
   --box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
   --border-bottom: 1px solid #ebeef5;
   --bs-primary: #5369f8;
 }
-
-/* MENUBAR */

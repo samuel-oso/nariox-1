@@ -1,19 +1,18 @@
 import { useState } from "react";
 import "../navbar/Navbar.css";
-// import { FullScreen, useFullScreenHandle } from "react-full-screen";
 import { Avatar, Collapse, Input, Grid, Paper } from "@mantine/core";
-import { useClickOutside } from "@mantine/hooks";
+import { useClickOutside, useFullscreen } from "@mantine/hooks";
 import { navContent, navApplication, navLanguage } from "../../data/data";
 import logo from "../../images/logo.png";
+import logoWeb from "../../images/logoWeb.png";
 import user from "../../images/user.png";
 import { FiSettings } from "react-icons/fi";
-import { AiOutlineMenu } from "react-icons/ai";
-import { FiSearch } from "react-icons/fi";
-import { BiSearch } from "react-icons/bi";
-import { IoMdNotificationsOutline } from "react-icons/io";
-import { RiArrowDownSLine } from "react-icons/ri";
-import { RiFullscreenFill } from "react-icons/ri";
-import { AiOutlineAppstore } from "react-icons/ai";
+import { TbMenu2 } from "react-icons/tb";
+import { TbSearch } from "react-icons/tb";
+import { TbBell } from "react-icons/tb";
+import { BiDownArrowAlt } from "react-icons/bi";
+import { TbDeviceLaptop } from "react-icons/tb";
+import { TbApps } from "react-icons/tb";
 import { FiGlobe } from "react-icons/fi";
 import { AiOutlineUser } from "react-icons/ai";
 import { CgLock } from "react-icons/cg";
@@ -31,6 +30,8 @@ const Navbar = () => {
   const [profile, setProfile] = useState(false);
   const [create, setCreate] = useState(false);
 
+  const { toggle, fullscreen } = useFullscreen();
+
   const ref = useClickOutside(() => {
     setNotification(false);
     setApplication(false);
@@ -39,42 +40,42 @@ const Navbar = () => {
     setCreate(false);
   });
 
-  // const handle = useFullScreenHandle();
-
   return (
     <>
-      <div className="navContainer">
+      <nav className="navContainer">
         <div className="navList">
           <a className="navHome">
-            <img src={logo} />
+            <img className="xl:hidden" src={logo} />
+            <img className="hidden xl:block" src={logoWeb} />
           </a>
-          <AiOutlineMenu />
+          <div>
+            <TbMenu2 style={{ color: "red" }} className="lg:hidden block" />
+            <TbMenu2 style={{ color: "green" }} className="hidden lg:block" />
+          </div>
           <div
             onClick={() => setCreate((o) => !o)}
             className="createNew hidden"
           >
             <p>Create New</p>
-            <RiArrowDownSLine />
+            <BiDownArrowAlt />
           </div>
         </div>
         <div className="navList">
           <div className="flex items-center">
-            <FiSearch className="lg:hidden" />
+            <TbSearch className="lg:hidden" />
             <Input
               className="navSearch"
               placeholder="Search..."
-              rightSection={<BiSearch />}
+              rightSection={<TbSearch />}
             />
           </div>
           <div className="hidden lg:flex items-center gap-4 ">
-            <RiFullscreenFill />
-            <AiOutlineAppstore onClick={() => setApplication((o) => !o)} />
+            <TbDeviceLaptop onClick={toggle} />
+            <TbApps onClick={() => setApplication((o) => !o)} />
             <FiGlobe onClick={() => setLanguage((o) => !o)} />
           </div>
           <div className="navNotificationIcon">
-            <IoMdNotificationsOutline
-              onClick={() => setNotification((o) => !o)}
-            />
+            <TbBell onClick={() => setNotification((o) => !o)} />
             <p className="navNotifyNo">6</p>
           </div>
           <div
@@ -84,12 +85,12 @@ const Navbar = () => {
             <Avatar src={user} radius="xl" />
             <div className="hidden items-end gap-x-1 md:flex">
               <p>Samuel Oso</p>
-              <RiArrowDownSLine />
+              <BiDownArrowAlt />
             </div>
           </div>
           <FiSettings />
         </div>
-      </div>
+      </nav>
 
       {/* search Collapse */}
       {/* {search && (

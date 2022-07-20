@@ -1,4 +1,4 @@
-// Navbar collapse Import
+import * as icons from "react-icons";
 import user2 from "../images/user2.jpg";
 import user3 from "../images/user3.jpg";
 import messenger from "../images/messenger.png";
@@ -17,6 +17,17 @@ import russian from "../../src/images/russian.jpg";
 import italian from "../../src/images/italian.jpg";
 import german from "../../src/images/german.jpg";
 import spanish from "../../src/images/spanish.jpg";
+
+import { TbHome } from "react-icons/tb";
+import { TbDeviceAnalytics } from "react-icons/tb";
+import { TbCalendarPlus } from "react-icons/tb";
+import { TbBrandHipchat } from "react-icons/tb";
+import { TbMail } from "react-icons/tb";
+import { TbBuilding } from "react-icons/tb";
+import { TbListDetails } from "react-icons/tb";
+import { TbNotebook } from "react-icons/tb";
+import { TbLayoutKanban } from "react-icons/tb";
+import { TbFilePlus } from "react-icons/tb";
 
 export const navContent = [
   {
@@ -98,5 +109,51 @@ export const navLanguage = [
   {
     img: spanish,
     p: "Spanish",
+  },
+];
+
+interface menuList {
+  icons?: string;
+}
+export const menuList = [
+  {
+    icon: TbHome,
+    p: "Dashboard",
+  },
+  {
+    icon: TbDeviceAnalytics,
+    p: "Analytics",
+  },
+  {
+    icon: TbCalendarPlus,
+    p: "Calendar",
+  },
+  {
+    icon: TbBrandHipchat,
+    p: "Chat",
+  },
+  {
+    icon: TbMail,
+    p: "Email",
+  },
+  {
+    icon: TbBuilding,
+    p: "Projects List",
+  },
+  {
+    icon: TbListDetails,
+    p: "Projects Details",
+  },
+  {
+    icon: TbNotebook,
+    p: "Tasks",
+  },
+  {
+    icon: TbLayoutKanban,
+    p: "Kanban Board",
+  },
+  {
+    icon: TbFilePlus,
+    p: "File Manager",
   },
 ];
