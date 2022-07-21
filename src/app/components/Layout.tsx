@@ -1,6 +1,6 @@
 import { AppShell } from "@mantine/core";
-import Menubar from "../../components/menubar/Menubar";
-import Navbar from "../../components/navbar/Navbar";
+import Menubar from "./Menubar";
+import Navbar from "./Navbar";
 
 type LayoutProps = {
   children: React.ReactNode;

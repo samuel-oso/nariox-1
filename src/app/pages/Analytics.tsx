@@ -1,4 +1,4 @@
-import Layout from "../../components/navigation/Layout";
+import Layout from "../components/Layout";
 import { Container } from "@mantine/core";
 
 const Analytics = () => {

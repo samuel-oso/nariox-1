@@ -27,6 +27,7 @@ body {
   --box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
   --border-bottom: 1px solid #ebeef5;
   --bs-primary: #5369f8;
+  --bg-body: #f3f4f7;
 }
 
 .Appshell {
@@ -50,7 +51,7 @@ body {
   position: fixed;
   overflow-y: auto;
   overflow-x: hidden;
-  background-color: var(--white);
+  background-color: var(--bg-body);
 }
 @media (min-width: 1024px) {
   .mantine-kv8twf {
