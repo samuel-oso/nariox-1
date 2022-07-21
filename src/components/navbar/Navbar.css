@@ -256,6 +256,9 @@
   z-index: 99;
   position: fixed;
 }
+.menuList-Active {
+  color: var(--bs-primary);
+}
 @media (min-width: 375px) {
   .navList {
     gap: 15px;

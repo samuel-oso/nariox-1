@@ -119,10 +119,12 @@ export const menuList = [
   {
     icon: TbHome,
     p: "Dashboard",
+    to: "/",
   },
   {
     icon: TbDeviceAnalytics,
     p: "Analytics",
+    to: "/analytics",
   },
   {
     icon: TbCalendarPlus,

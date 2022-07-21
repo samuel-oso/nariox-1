@@ -23,7 +23,8 @@
     font-size: 15.2px;
   }
   .menuList:hover p,
-  .menuList:hover svg {
+  .menuList:hover svg,
+  .menuList-Active {
     color: var(--bs-primary);
     fill: var(--svg-active-fill);
   }

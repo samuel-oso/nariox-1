@@ -2,6 +2,8 @@ import { useState } from "react";
 import "../navbar/Navbar.css";
 import { Avatar, Collapse, Input, Grid, Paper } from "@mantine/core";
 import { useClickOutside, useFullscreen } from "@mantine/hooks";
+import { useLocation, useNavigate } from "react-router-dom";
+
 import {
   navContent,
   navApplication,
@@ -39,6 +41,8 @@ const Navbar = () => {
   const { toggle, fullscreen } = useFullscreen();
 
   const iconStyle = {};
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
 
   // const ref = useClickOutside(() => {
   //   setNotification(false);
@@ -229,7 +233,12 @@ const Navbar = () => {
         <aside>
           {menuList.map((props) => {
             return (
-              <div className="flex items-center py-4 px-5 gap-2">
+              <div
+                onClick={() => navigate(`${props.to}`)}
+                className={`flex items-center py-4 px-5 gap-2 ${
+                  pathname === `${props.to}` && "menuList-Active"
+                }`}
+              >
                 <props.icon style={iconStyle} />
                 <p>{props.p}</p>
               </div>
