@@ -28,3 +28,39 @@ body {
   --border-bottom: 1px solid #ebeef5;
   --bs-primary: #5369f8;
 }
+
+.Appshell {
+  background-color: green;
+  width: 100%;
+}
+.main-container {
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  width: 100%;
+  position: relative;
+  top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.mantine-kv8twf {
+  height: 100vh;
+  padding: 0 !important;
+  flex: 1 auto;
+  height: 100%;
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--white);
+}
+@media (min-width: 1024px) {
+  .mantine-kv8twf {
+    margin-left: 75px;
+    width: calc(100% - 75px);
+  }
+}
+@media (min-width: 1280px) {
+  .mantine-kv8twf {
+    margin-left: 250px;
+    width: calc(100% - 250px);
+  }
+}

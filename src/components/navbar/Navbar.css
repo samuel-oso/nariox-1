@@ -6,7 +6,10 @@
   padding: 20px 20px 20px 0;
   border-bottom: 1px solid var(--gray);
   height: 70px;
-  position: relative;
+  position: fixed;
+  width: 100%;
+  z-index: 99;
+  background-color: var(--white);
 }
 .navList {
   display: flex;
@@ -36,6 +39,7 @@
   width: 17px;
   height: 25px;
 }
+
 .navNotificationIcon {
   display: flex;
   align-items: center;
@@ -73,17 +77,27 @@
   height: 32px;
   color: var(--bs-gray-300);
 }
-.navNotification {
-  padding: 0 !important;
-  width: 100%;
-}
 .navNotificationCard {
-  box-shadow: var(--box-shadow);
+  position: absolute;
   max-height: 330px;
   max-width: 95%;
   overflow: auto !important;
-  border-radius: 5px;
   margin: 0 auto;
+  box-shadow: var(--box-shadow);
+  width: 95%;
+  margin: 0 auto;
+  border-radius: 0 0 4px 4px;
+  background-color: var(--white);
+  z-index: 99;
+  top: 70px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.navNotification {
+  padding: 0 !important;
+  width: 100%;
 }
 .navNotificationCard::-webkit-scrollbar {
   width: 5px;
@@ -102,7 +116,7 @@
   z-index: 9999;
   background-color: var(--white);
   width: 100%;
-  bottom: -1px;
+  bottom: -4px;
 }
 .navNotificationcontent {
   background-color: var(--white);
@@ -122,6 +136,7 @@
   color: var(--bs-gray-300);
   font-size: 12px;
   margin-top: 5px;
+  bottom: 0;
 }
 .navNotificationcontent img {
   width: 30px;
@@ -149,6 +164,8 @@
   inset: 0px 0px auto auto;
   transform: translate3d(-300px, 72px, 0px);
   padding: 6px;
+  z-index: 99;
+  background-color: var(--white);
 }
 .navApplicationCard img {
   width: 24px;
@@ -165,13 +182,13 @@
   margin-top: 4px;
 }
 .navLanguageCard {
-  padding: 4px 0;
   box-shadow: var(--box-shadow);
   width: 160px;
   position: absolute;
   inset: 0px 0px auto auto;
   transform: translate3d(-270px, 72px, 0px);
   border-radius: 5px;
+  z-index: 99;
 }
 .navLang {
   display: flex;
@@ -180,6 +197,7 @@
   background-color: var(--white);
   cursor: pointer;
   padding: 6px 20px;
+  border-bottom: var(--border-bottom);
 }
 .navLang img {
   width: 18px;
@@ -194,8 +212,15 @@
   box-shadow: var(--box-shadow);
   width: 95%;
   margin: 0 auto;
-  border-radius: 5px;
+  border-radius: 0 0 4px 4px;
   background-color: var(--white);
+  z-index: 99;
+  position: absolute;
+  top: 70px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
 }
 .navProfile h3 {
   padding: 15px 20px;
@@ -222,12 +247,14 @@
   display: none;
 }
 .sidebarMenu {
-  background-color: red;
+  background-color: var(--white);
   border-right: 1px solid var(--gray);
-  bottom: 0;
+  top: 70px;
   padding: 20px 0;
   height: 100vh;
   width: 250px;
+  z-index: 99;
+  position: fixed;
 }
 @media (min-width: 375px) {
   .navList {
@@ -241,6 +268,7 @@
   .navCollapse-Mobile input {
     max-width: 280px;
   }
+
   .navNotificationCard {
     max-width: 330px;
     position: absolute;
@@ -296,6 +324,8 @@
       position: absolute;
       inset: 0px auto auto 0px;
       transform: translate3d(285px, 72px, 0px);
+      z-index: 99;
+      background-color: var(--white);
     }
     .navCreateList {
       display: flex;

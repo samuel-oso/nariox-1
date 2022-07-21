@@ -1,15 +1,16 @@
 import React from "react";
 import "./App.css";
-// import Menubar from "./components/menubar/Menubar";
-// import Navbar from "./components/navbar/Navbar";
-import Layout from "./components/navigation/Layout";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Dashboard from "./pages/Dashboard";
 
 function App() {
   return (
     <div>
-      <Layout>
-        <p></p>
-      </Layout>
+      <Router>
+        <Routes>
+          <Route path="/" element={<Dashboard />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

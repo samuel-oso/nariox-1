@@ -40,14 +40,14 @@ const Navbar = () => {
 
   const iconStyle = {};
 
-  const ref = useClickOutside(() => {
-    setNotification(false);
-    setApplication(false);
-    setLanguage(false);
-    setProfile(false);
-    setCreate(false);
-    setMenubar(false);
-  });
+  // const ref = useClickOutside(() => {
+  //   setNotification(false);
+  //   setApplication(false);
+  //   setLanguage(false);
+  //   setProfile(false);
+  //   setCreate(false);
+  //   setMenubar(false);
+  // });
 
   return (
     <>
@@ -85,8 +85,11 @@ const Navbar = () => {
             <TbApps onClick={() => setApplication((o) => !o)} />
             <FiGlobe onClick={() => setLanguage((o) => !o)} />
           </div>
-          <div className="navNotificationIcon">
-            <TbBell onClick={() => setNotification((o) => !o)} />
+          <div
+            onClick={() => setNotification((o) => !o)}
+            className="navNotificationIcon"
+          >
+            <TbBell />
             <p className="navNotifyNo">6</p>
           </div>
           <div
@@ -115,152 +118,125 @@ const Navbar = () => {
       )} */}
 
       {/* Notification Collapse */}
-      {notification && (
-        <Paper ref={ref}>
-          <Collapse in={notification} className="navNotificationCard">
-            <div className="navNotification flex-col">
-              <div className="navNotificationSticky top-0 justify-between">
-                <h4 className="text-base font-medium">Notification</h4>
-                <p
-                  className="cursor-pointer"
-                  onClick={() => setNotification((o) => !o)}
-                >
-                  clear All
-                </p>
-              </div>
-              <div className="navNotificationcontent">
-                {navContent.map((props) => {
-                  return (
-                    <div className="navNotificationList">
-                      <img src={props.img} />
-                      <div className="mx-3">
-                        <h3>{props.h3}</h3>
-                        <p>{props.p}</p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-              <div
-                onClick={() => setNotification((o) => !o)}
-                className="navNotificationSticky justify-center cursor-pointer"
-              >
-                <p style={{ color: "var(--bs-primary)" }}>View All</p>
-              </div>
-            </div>
-          </Collapse>
-        </Paper>
-      )}
-
-      {/* Applications collapse */}
-      {application && (
-        <Paper ref={ref}>
-          <Collapse
-            className="navApplicationCard hidden lg:block"
-            in={application}
-          >
-            <Grid gutter="xs">
-              {navApplication.map((navApp) => {
-                return (
-                  <Grid.Col className="cursor-pointer navAppcol" span={4}>
-                    <div className="w-24 py-4">
-                      <img src={navApp.img} />
-                      <p>{navApp.p}</p>
-                    </div>
-                  </Grid.Col>
-                );
-              })}
-            </Grid>
-          </Collapse>
-        </Paper>
-      )}
-
-      {/* Language collapse */}
-      {language && (
-        <Paper ref={ref}>
-          <Collapse className="navLanguageCard hidden lg:block" in={language}>
-            {navLanguage.map((navLang) => {
+      <Collapse in={notification} className="navNotificationCard">
+        <div className="navNotification flex-col">
+          <div className="navNotificationSticky top-0 justify-between">
+            <h4 className="text-base font-medium">Notification</h4>
+            <p
+              className="cursor-pointer"
+              onClick={() => setNotification((o) => !o)}
+            >
+              clear All
+            </p>
+          </div>
+          <div className="navNotificationcontent">
+            {navContent.map((props) => {
               return (
-                <div className="navLang">
-                  <img src={navLang.img} />
-                  <p>{navLang.p}</p>
+                <div className="navNotificationList">
+                  <img src={props.img} />
+                  <div className="mx-3">
+                    <h3>{props.h3}</h3>
+                    <p>{props.p}</p>
+                  </div>
                 </div>
               );
             })}
-          </Collapse>
-        </Paper>
-      )}
+          </div>
+          <div
+            onClick={() => setNotification((o) => !o)}
+            className="navNotificationSticky justify-center cursor-pointer"
+          >
+            <p style={{ color: "var(--bs-primary)" }}>View All</p>
+          </div>
+        </div>
+      </Collapse>
+
+      {/* Applications collapse */}
+      <Collapse className="navApplicationCard hidden lg:block" in={application}>
+        <Grid gutter="xs">
+          {navApplication.map((navApp) => {
+            return (
+              <Grid.Col className="cursor-pointer navAppcol" span={4}>
+                <div className="w-24 py-4">
+                  <img src={navApp.img} />
+                  <p>{navApp.p}</p>
+                </div>
+              </Grid.Col>
+            );
+          })}
+        </Grid>
+      </Collapse>
+
+      {/* Language collapse */}
+      <Collapse className="navLanguageCard hidden lg:block" in={language}>
+        {navLanguage.map((navLang) => {
+          return (
+            <div className="navLang">
+              <img src={navLang.img} />
+              <p>{navLang.p}</p>
+            </div>
+          );
+        })}
+      </Collapse>
 
       {/* Profile Collapse */}
-      {profile && (
-        <Paper ref={ref}>
-          <Collapse className="navProfile" in={profile}>
-            <div>
-              <h3>Welcome !</h3>
-              <div className="navProfileList">
-                <AiOutlineUser />
-                <p>My Account</p>
-              </div>
-              <div className="navProfileList">
-                <CgLock />
-                <p>Lock Screen</p>
-              </div>
-              <div className="navDivider" />
-              <div className="navProfileList">
-                <MdOutlineLogout />
-                <p>Logout</p>
-              </div>
-            </div>
-          </Collapse>
-        </Paper>
-      )}
+      <Collapse className="navProfile" in={profile}>
+        <div>
+          <h3>Welcome !</h3>
+          <div className="navProfileList">
+            <AiOutlineUser />
+            <p>My Account</p>
+          </div>
+          <div className="navProfileList">
+            <CgLock />
+            <p>Lock Screen</p>
+          </div>
+          <div className="navDivider" />
+          <div className="navProfileList">
+            <MdOutlineLogout />
+            <p>Logout</p>
+          </div>
+        </div>
+      </Collapse>
 
       {/* Create New collapse */}
-      {create && (
-        <Paper ref={ref}>
-          <Collapse className="navCreate" in={create}>
-            <div className="navCreateList">
-              <BsBag />
-              <p>New Projects</p>
-            </div>
-            <div className="navCreateList">
-              <BiUserPlus />
-              <p>Create Users</p>
-            </div>
-            <div className="navCreateList">
-              <VscPieChart />
-              <p>Revenue Report</p>
-            </div>
-            <div className="navCreateList">
-              <FiSettings />
-              <p>Settings</p>
-            </div>
-            <div className="navDivider" />
-            <div className="navCreateList">
-              <FiHelpCircle />
-              <p>Help & Support</p>
-            </div>
-          </Collapse>
-        </Paper>
-      )}
+      <Collapse className="navCreate" in={create}>
+        <div className="navCreateList">
+          <BsBag />
+          <p>New Projects</p>
+        </div>
+        <div className="navCreateList">
+          <BiUserPlus />
+          <p>Create Users</p>
+        </div>
+        <div className="navCreateList">
+          <VscPieChart />
+          <p>Revenue Report</p>
+        </div>
+        <div className="navCreateList">
+          <FiSettings />
+          <p>Settings</p>
+        </div>
+        <div className="navDivider" />
+        <div className="navCreateList">
+          <FiHelpCircle />
+          <p>Help & Support</p>
+        </div>
+      </Collapse>
 
       {/* Mobile menu bar collapse */}
-      {menubar && (
-        <Paper className="w-64" ref={ref}>
-          <Collapse className="sidebarMenu" in={menubar}>
-            <aside>
-              {menuList.map((props) => {
-                return (
-                  <div className="flex items-center py-4 px-5 gap-2">
-                    <props.icon style={iconStyle} />
-                    <p>{props.p}</p>
-                  </div>
-                );
-              })}
-            </aside>
-          </Collapse>
-        </Paper>
-      )}
+      <Collapse className="sidebarMenu" in={menubar}>
+        <aside>
+          {menuList.map((props) => {
+            return (
+              <div className="flex items-center py-4 px-5 gap-2">
+                <props.icon style={iconStyle} />
+                <p>{props.p}</p>
+              </div>
+            );
+          })}
+        </aside>
+      </Collapse>
     </>
   );
 };
