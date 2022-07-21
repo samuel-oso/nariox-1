@@ -1,0 +1,14 @@
+.downloadCollapse {
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  inset: 0px auto auto 0px;
+  transform: translate3d(20px, 227px, 0px);
+  z-index: 1000;
+  color: var(--bs-gray-400);
+}
+
+@media (min-width: 768px) {
+  .downloadCollapse {
+    transform: translate3d(605px, 127px, 0px);
+  }
+}

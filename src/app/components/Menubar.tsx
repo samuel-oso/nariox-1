@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import "../menubar/Menubar.css";
 import { menuList } from "../../data/data";
+import "../../styles/components/Menubar.css";
 import { useLocation, useNavigate } from "react-router-dom";
 
 function Menubar() {

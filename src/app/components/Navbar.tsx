@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../navbar/Navbar.css";
+import "../../styles/components/Navbar.css";
 import { Avatar, Collapse, Input, Grid, Paper } from "@mantine/core";
 import { useClickOutside, useFullscreen } from "@mantine/hooks";
 import { useLocation, useNavigate } from "react-router-dom";
