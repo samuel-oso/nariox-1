@@ -223,7 +223,7 @@
 }
 @media (min-width: 375px) {
   .navList {
-    gap: 16px;
+    gap: 5px;
   }
 }
 @media (min-width: 768px) {
@@ -282,7 +282,7 @@
       border-radius: 5px;
       position: absolute;
       inset: 0px auto auto 0px;
-      transform: translate3d(105px, 72px, 0px);
+      transform: translate3d(285px, 72px, 0px);
     }
     .navCreateList {
       display: flex;

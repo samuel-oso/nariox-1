@@ -10,7 +10,7 @@ import { FiSettings } from "react-icons/fi";
 import { TbMenu2 } from "react-icons/tb";
 import { TbSearch } from "react-icons/tb";
 import { TbBell } from "react-icons/tb";
-import { BiDownArrowAlt } from "react-icons/bi";
+import { FiChevronDown } from "react-icons/fi";
 import { TbDeviceLaptop } from "react-icons/tb";
 import { TbApps } from "react-icons/tb";
 import { FiGlobe } from "react-icons/fi";
@@ -49,15 +49,14 @@ const Navbar = () => {
             <img className="hidden xl:block" src={logoWeb} />
           </a>
           <div>
-            <TbMenu2 style={{ color: "red" }} className="lg:hidden block" />
-            <TbMenu2 style={{ color: "green" }} className="hidden lg:block" />
+            <TbMenu2 className="lg:hidden block" />
           </div>
           <div
             onClick={() => setCreate((o) => !o)}
             className="createNew hidden"
           >
             <p>Create New</p>
-            <BiDownArrowAlt />
+            <FiChevronDown />
           </div>
         </div>
         <div className="navList">
@@ -85,7 +84,7 @@ const Navbar = () => {
             <Avatar src={user} radius="xl" />
             <div className="hidden items-end gap-x-1 md:flex">
               <p>Samuel Oso</p>
-              <BiDownArrowAlt />
+              <FiChevronDown />
             </div>
           </div>
           <FiSettings />
