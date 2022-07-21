@@ -221,9 +221,17 @@
 .navCreate {
   display: none;
 }
+.sidebarMenu {
+  background-color: red;
+  border-right: 1px solid var(--gray);
+  bottom: 0;
+  padding: 20px 0;
+  height: 100vh;
+  width: 250px;
+}
 @media (min-width: 375px) {
   .navList {
-    gap: 5px;
+    gap: 15px;
   }
 }
 @media (min-width: 768px) {
@@ -262,6 +270,11 @@
   }
   .navCollapse-Mobile {
     display: none;
+  }
+  @media (min-width: 1024px) {
+    .sidebarMenu {
+      display: none;
+    }
   }
   @media (min-width: 1200px) {
     .createNew {

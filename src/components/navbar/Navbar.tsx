@@ -2,7 +2,12 @@ import { useState } from "react";
 import "../navbar/Navbar.css";
 import { Avatar, Collapse, Input, Grid, Paper } from "@mantine/core";
 import { useClickOutside, useFullscreen } from "@mantine/hooks";
-import { navContent, navApplication, navLanguage } from "../../data/data";
+import {
+  navContent,
+  navApplication,
+  navLanguage,
+  menuList,
+} from "../../data/data";
 import logo from "../../images/logo.png";
 import logoWeb from "../../images/logoWeb.png";
 import user from "../../images/user.png";
@@ -29,8 +34,11 @@ const Navbar = () => {
   const [language, setLanguage] = useState(false);
   const [profile, setProfile] = useState(false);
   const [create, setCreate] = useState(false);
+  const [menubar, setMenubar] = useState(false);
 
   const { toggle, fullscreen } = useFullscreen();
+
+  const iconStyle = {};
 
   const ref = useClickOutside(() => {
     setNotification(false);
@@ -38,6 +46,7 @@ const Navbar = () => {
     setLanguage(false);
     setProfile(false);
     setCreate(false);
+    setMenubar(false);
   });
 
   return (
@@ -49,7 +58,10 @@ const Navbar = () => {
             <img className="hidden xl:block" src={logoWeb} />
           </a>
           <div>
-            <TbMenu2 className="lg:hidden block" />
+            <TbMenu2
+              className="lg:hidden block"
+              onClick={() => setMenubar((o) => !o)}
+            />
           </div>
           <div
             onClick={() => setCreate((o) => !o)}
@@ -228,6 +240,24 @@ const Navbar = () => {
               <FiHelpCircle />
               <p>Help & Support</p>
             </div>
+          </Collapse>
+        </Paper>
+      )}
+
+      {/* Mobile menu bar collapse */}
+      {menubar && (
+        <Paper className="w-64" ref={ref}>
+          <Collapse className="sidebarMenu" in={menubar}>
+            <aside>
+              {menuList.map((props) => {
+                return (
+                  <div className="flex items-center py-4 px-5 gap-2">
+                    <props.icon style={iconStyle} />
+                    <p>{props.p}</p>
+                  </div>
+                );
+              })}
+            </aside>
           </Collapse>
         </Paper>
       )}

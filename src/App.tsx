@@ -1,6 +1,5 @@
 import React from "react";
 import "./App.css";
-import MenuMobile from "./components/menubar/MenuMobile";
 // import Menubar from "./components/menubar/Menubar";
 // import Navbar from "./components/navbar/Navbar";
 import Layout from "./components/navigation/Layout";
