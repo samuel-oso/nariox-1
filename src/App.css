@@ -29,6 +29,7 @@ body {
   --border-bottom: 1px solid #ebeef5;
   --border-top: 1px solid #e2e7f1;
   --bs-primary: #5369f8;
+  --bs-primary-hover: #0a29f5;
   --bg-body: #f3f4f7;
   --success: #43d39e;
   --danger: #ff5c75;

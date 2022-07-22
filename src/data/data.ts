@@ -29,6 +29,11 @@ import { TbNotebook } from "react-icons/tb";
 import { TbLayoutKanban } from "react-icons/tb";
 import { TbFilePlus } from "react-icons/tb";
 
+import { TbUsers } from "react-icons/tb";
+import { HiOutlinePhotograph } from "react-icons/hi";
+import { RiShoppingBag3Line } from "react-icons/ri";
+import { CgShoppingBag } from "react-icons/cg";
+
 export const navContent = [
   {
     img: user2,
@@ -157,5 +162,26 @@ export const menuList = [
   {
     icon: TbFilePlus,
     p: "File Manager",
+  },
+];
+
+interface dashboardOverview {
+  icons?: string;
+}
+export const dashboardOverview = [
+  {
+    h3: "871,345",
+    p: "Total Visitors",
+    icon: TbUsers,
+  },
+  {
+    h3: "8,705",
+    p: "Total Product Views",
+    icon: HiOutlinePhotograph,
+  },
+  {
+    h3: "$99.8",
+    p: "Revenue Per Visitor",
+    icon: CgShoppingBag,
   },
 ];
