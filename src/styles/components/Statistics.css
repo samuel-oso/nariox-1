@@ -1,0 +1,14 @@
+.apexCharts {
+  min-height: 10px !important;
+}
+.statsCard {
+  padding: 20px;
+  border: 1px solid var(--gray);
+  background-color: var(--white);
+  word-wrap: break-word;
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+.statsGridCol {
+  padding: 0 12px 0 12px !important;
+}

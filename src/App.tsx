@@ -1,8 +1,8 @@
 import React from "react";
 import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Dashboard from "./app/pages/Dashboard";
-import Analytics from "./app/pages/Analytics";
+import Dashboard from "./pages/Dashboard";
+import Analytics from "./pages/Analytics";
 
 function App() {
   return (

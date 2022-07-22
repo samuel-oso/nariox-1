@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "../../styles/components/Navbar.css";
+import "../../src/styles/components/Navbar.css";
 import { Avatar, Collapse, Input, Grid, Paper } from "@mantine/core";
 import { useClickOutside, useFullscreen } from "@mantine/hooks";
 import { useLocation, useNavigate } from "react-router-dom";
@@ -8,10 +8,10 @@ import {
   navApplication,
   navLanguage,
   menuList,
-} from "../../data/data";
-import logo from "../../images/logo.png";
-import logoWeb from "../../images/logoWeb.png";
-import user from "../../images/user.png";
+} from "../data/data";
+import logo from "../../src/images/logo.png";
+import logoWeb from "../../src/images/logoWeb.png";
+import user from "../../src/images/user.png";
 import { FiSettings } from "react-icons/fi";
 import { TbMenu2 } from "react-icons/tb";
 import { TbSearch } from "react-icons/tb";

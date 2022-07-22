@@ -7,6 +7,10 @@ import { MantineProvider, MantineThemeOverride } from "@mantine/core";
 export const transfersTheme: MantineThemeOverride = {
   fontFamily: "IBM Plex Sans, sans-serif",
   headings: { fontFamily: "IBM Plex Sans, sans-serif" },
+  breakpoints: {
+    md: 767,
+    lg: 1200,
+  },
 };
 
 const root = ReactDOM.createRoot(

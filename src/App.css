@@ -30,10 +30,12 @@ body {
   --border-top: 1px solid #e2e7f1;
   --bs-primary: #5369f8;
   --bg-body: #f3f4f7;
+  --success: #43d39e;
+  --danger: #ff5c75;
 }
 
 .Appshell {
-  background-color: green;
+  background-color: var(--bg-body);
   width: 100%;
 }
 .main-container {
@@ -42,6 +44,7 @@ body {
   top: 70px;
   margin-left: auto;
   margin-right: auto;
+  padding: 20px;
 }
 .mantine-kv8twf {
   height: 100vh;
@@ -52,6 +55,12 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   background-color: var(--bg-body);
+}
+.text-success {
+  color: var(--success);
+}
+.text-danger {
+  color: var(--danger);
 }
 @media (min-width: 1024px) {
   .mantine-kv8twf {
