@@ -7,7 +7,7 @@ import { TbArrowNarrowUp } from "react-icons/tb";
 const Statistics = () => {
   return (
     <div>
-      <Grid>
+      <Grid className="statsGrid">
         <Grid.Col md={6} lg={3} className="statsGridCol">
           <StatisticsChartWidget
             title="Today Revenue"
@@ -17,7 +17,7 @@ const Statistics = () => {
               icon: TbArrowNarrowUp,
               value: "6.01%",
             }}
-            colors={["#727cf5"]}
+            colors={["var(--chart-100)"]}
           />
         </Grid.Col>
         <Grid.Col md={6} lg={3} className="statsGridCol">
@@ -29,7 +29,7 @@ const Statistics = () => {
               icon: TbArrowNarrowDown,
               value: "35.16%",
             }}
-            colors={["#f77e53"]}
+            colors={["var(--chart-200)"]}
           />
         </Grid.Col>
         <Grid.Col md={6} lg={3} className="statsGridCol">
@@ -41,7 +41,7 @@ const Statistics = () => {
               icon: TbArrowNarrowUp,
               value: "3.12%",
             }}
-            colors={["#43d39e"]}
+            colors={["var(--chart-300)"]}
           />
         </Grid.Col>
         <Grid.Col md={6} lg={3} className="statsGridCol">
@@ -53,7 +53,7 @@ const Statistics = () => {
               icon: TbArrowNarrowDown,
               value: "18.95%",
             }}
-            colors={["#ffbe0b"]}
+            colors={["var(--chart-400)"]}
           />
         </Grid.Col>
       </Grid>

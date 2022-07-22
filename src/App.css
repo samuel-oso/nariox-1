@@ -33,6 +33,10 @@ body {
   --bg-body: #f3f4f7;
   --success: #43d39e;
   --danger: #ff5c75;
+  --chart-100: #727cf5;
+  --chart-200: #f77e53;
+  --chart-300: #43d39e;
+  --chart-400: #ffbe0b;
 }
 
 .Appshell {

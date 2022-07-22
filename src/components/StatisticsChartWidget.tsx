@@ -61,10 +61,10 @@ const StatisticsChartWidget = ({
       type: "gradient",
       gradient: {
         type: "vertical",
-        shadeIntensity: 1,
+        shadeIntensity: 0.2,
         inverseColors: false,
-        opacityFrom: 0.45,
-        opacityTo: 0.05,
+        opacityFrom: 0.2,
+        opacityTo: 0,
         stops: [45, 100],
       },
     },
@@ -73,7 +73,7 @@ const StatisticsChartWidget = ({
   // chart data
   const series = [
     {
-      data: [10, 61, 32, 12, 87, 15, 37, 19, 99, 62, 100],
+      data: [10, 25, 5, 30, 10, 45, 15, 60, 20, 80, 40],
     },
   ];
 
@@ -97,7 +97,7 @@ const StatisticsChartWidget = ({
           </div>
           <div className="self-center shrink-0">
             <Chart
-              className="apexCharts"
+              className="statsCharts"
               options={options}
               series={series}
               type="area"

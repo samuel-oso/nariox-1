@@ -14,9 +14,9 @@ import { TbArrowNarrowRight } from "react-icons/tb";
 import { TbRefreshDot } from "react-icons/tb";
 import { FiUserPlus } from "react-icons/fi";
 import { TbLogout } from "react-icons/tb";
-import { TbUsers } from "react-icons/tb";
 import Statistics from "../components/Statistics";
 import { dashboardOverview } from "../data/data";
+import RevenueChart from "../components/RevenueChart";
 
 const Dashboard = () => {
   const [download, setDownload] = useState(false);
@@ -71,6 +71,9 @@ const Dashboard = () => {
               <span>View All</span>
               <TbArrowNarrowRight />
             </div>
+          </div>
+          <div>
+            <RevenueChart />
           </div>
         </div>
       </div>

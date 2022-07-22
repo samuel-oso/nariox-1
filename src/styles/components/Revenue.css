@@ -1,0 +1,19 @@
+.revenueCard {
+  padding: 20px;
+  border: 1px solid var(--gray);
+  background-color: var(--white);
+  word-wrap: break-word;
+  border-radius: 4px;
+  background-color: var(--white);
+  margin-bottom: 24px;
+}
+.revenueCharts {
+  min-height: 10px !important;
+  margin-top: 30px;
+}
+.apexcharts-axis-label {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--bs-gray-400);
+  font-weight: 700;
+  font-size: 11px;
+}

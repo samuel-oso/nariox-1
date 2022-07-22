@@ -23,6 +23,7 @@
 .overview {
   border: 1px solid var(--gray);
   background-color: var(--white);
+  margin-bottom: 24px;
 }
 .dashboardOverview {
   padding: 24px;
@@ -65,7 +66,7 @@
   border-radius: 4px;
   position: absolute;
   inset: 0px 0px auto auto;
-  transform: translate3d(-40px, 800px, 0px);
+  transform: translate3d(-40px, 810px, 0px);
 }
 .ellipseItem {
   display: flex;
@@ -83,6 +84,6 @@
     transform: translate3d(-19px, 128px, 0px);
   }
   .ellipseCollapse {
-    transform: translate3d(-40px, 445px, 0px);
+    transform: translate3d(-40px, 456px, 0px);
   }
 }

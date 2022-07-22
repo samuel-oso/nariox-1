@@ -1,4 +1,3 @@
-import * as icons from "react-icons";
 import user2 from "../images/user2.jpg";
 import user3 from "../images/user3.jpg";
 import messenger from "../images/messenger.png";
@@ -31,7 +30,6 @@ import { TbFilePlus } from "react-icons/tb";
 
 import { TbUsers } from "react-icons/tb";
 import { HiOutlinePhotograph } from "react-icons/hi";
-import { RiShoppingBag3Line } from "react-icons/ri";
 import { CgShoppingBag } from "react-icons/cg";
 
 export const navContent = [
