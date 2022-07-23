@@ -13,6 +13,7 @@ import Statistics from "../components/Statistics";
 import RevenueChart from "../components/RevenueChart";
 import TargetChart from "../components/TargetChart";
 import Overview from "../components/Overview";
+import SalesChart from "../components/SalesChart";
 
 const Dashboard = () => {
   const [download, setDownload] = useState(false);
@@ -59,6 +60,10 @@ const Dashboard = () => {
             </div>
           </Grid.Col>
         </Grid>
+
+        <div>
+          <SalesChart />
+        </div>
       </div>
 
       {/* Download Button collapse */}

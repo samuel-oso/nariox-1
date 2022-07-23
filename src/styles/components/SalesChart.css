@@ -1,0 +1,43 @@
+.salesCard {
+  padding: 20px;
+  border: 1px solid var(--gray);
+  background-color: var(--white);
+  word-wrap: break-word;
+  border-radius: 4px;
+  background-color: var(--white);
+  margin-bottom: 24px;
+}
+.salesCharts {
+  min-height: 10px !important;
+  margin-top: 30px;
+}
+.apexcharts-axis-label {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: var(--bs-gray-400);
+  font-weight: 700;
+  font-size: 11px;
+}
+.salesCollapse {
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  width: 140px;
+  border-radius: 4px;
+  position: absolute;
+  inset: 0px 0px auto auto;
+  transform: translate3d(-15px, 45px, 0px);
+}
+.salesItem {
+  display: flex;
+  align-items: center;
+  padding: 6px 20px;
+  color: var(--bs-gray-400);
+  gap: 10px;
+}
+.salesItem:hover {
+  background-color: var(--bg-gray-100);
+}
+/* @media (min-width: 1280px) {
+    .targetCard {
+      height: 432px;
+    }
+  } */
