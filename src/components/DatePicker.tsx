@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { DateRangePicker } from "@mantine/dates";
-import "../../src/styles/components/DatePicker.css";
+import "../../src/styles/pages/Dashboard.css";
 
 function DatePicker() {
   const [value, setValue] = useState<[Date | null, Date | null]>([

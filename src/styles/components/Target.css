@@ -36,3 +36,8 @@
 .targetItem:hover {
   background-color: var(--bg-gray-100);
 }
+@media (min-width: 1280px) {
+  .targetCard {
+    height: 432px;
+  }
+}

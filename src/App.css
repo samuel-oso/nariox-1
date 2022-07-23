@@ -67,6 +67,7 @@ body {
 .text-danger {
   color: var(--danger);
 }
+
 @media (min-width: 1024px) {
   .mantine-kv8twf {
     margin-left: 75px;

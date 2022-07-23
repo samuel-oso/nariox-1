@@ -1,0 +1,60 @@
+.overview {
+  border: 1px solid var(--gray);
+  background-color: var(--white);
+  margin-bottom: 24px;
+  border-radius: 4px;
+  position: relative;
+}
+.dashboardOverview {
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--gray);
+}
+.overview p {
+  color: var(--bs-gray-300);
+}
+.overview h4,
+.overview h1 {
+  color: var(--bs-gray-dark);
+}
+.overviewSVG {
+  fill: var(--svg-active-fill);
+  color: var(--bs-gray-300);
+  height: 32px;
+  width: 32px;
+}
+.overviewExpand {
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  color: var(--bs-primary) !important;
+  gap: 5px;
+  border-top: 1px solid var(--gray);
+  cursor: pointer;
+}
+.overviewExpand span:hover,
+.overviewExpand svg:hover {
+  color: var(--bs-primary-hover);
+}
+.ellipseCollapse {
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  width: 140px;
+  border-radius: 4px;
+  position: absolute;
+  inset: 0px 0px auto auto;
+  transform: translate3d(-15px, 50px, 0px);
+}
+.ellipseItem {
+  display: flex;
+  align-items: center;
+  padding: 6px 20px;
+  color: var(--bs-gray-400);
+  gap: 10px;
+}
+.ellipseItem:hover {
+  background-color: var(--bg-gray-100);
+}

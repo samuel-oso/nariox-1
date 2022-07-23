@@ -30,3 +30,8 @@
 .revenueItem {
   padding: 6px 19px;
 }
+@media (min-width: 1280px) {
+  .revenueCard {
+    height: 432px;
+  }
+}
