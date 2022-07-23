@@ -17,6 +17,7 @@ import { TbLogout } from "react-icons/tb";
 import Statistics from "../components/Statistics";
 import { dashboardOverview } from "../data/data";
 import RevenueChart from "../components/RevenueChart";
+import TargetChart from "../components/TargetChart";
 
 const Dashboard = () => {
   const [download, setDownload] = useState(false);
@@ -74,6 +75,9 @@ const Dashboard = () => {
           </div>
           <div>
             <RevenueChart />
+          </div>
+          <div>
+            <TargetChart />
           </div>
         </div>
       </div>
