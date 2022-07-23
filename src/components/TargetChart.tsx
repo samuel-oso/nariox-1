@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import Chart from "react-apexcharts";
-import { Card } from "@mantine/core";
+import { Card, Collapse, Divider } from "@mantine/core";
 import { ApexOptions } from "apexcharts";
 import "../styles/components/Target.css";
 import { FaEllipsisV } from "react-icons/fa";
+import { TbRefreshDot } from "react-icons/tb";
+import { FiUserPlus } from "react-icons/fi";
+import { TbLogout } from "react-icons/tb";
 
 const TargetChart = () => {
   const [target, setTarget] = useState(false);
@@ -105,6 +108,24 @@ const TargetChart = () => {
         height={349}
         dir="ltr"
       />
+
+      <Collapse in={target} className="targetCollapse">
+        <div className="py-1">
+          <div className="targetItem">
+            <TbRefreshDot />
+            <p>Refresh</p>
+          </div>
+          <div className="targetItem">
+            <FiUserPlus />
+            <p>Add New</p>
+          </div>
+          <Divider className="my-3" />
+          <div style={{ color: "var(--danger)" }} className="targetItem">
+            <TbLogout />
+            <p>Exit</p>
+          </div>
+        </div>
+      </Collapse>
     </Card>
   );
 };

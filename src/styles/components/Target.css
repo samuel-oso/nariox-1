@@ -17,3 +17,22 @@
   font-weight: 700;
   font-size: 11px;
 }
+.targetCollapse {
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  width: 140px;
+  border-radius: 4px;
+  position: absolute;
+  inset: 0px 0px auto auto;
+  transform: translate3d(-15px, 45px, 0px);
+}
+.targetItem {
+  display: flex;
+  align-items: center;
+  padding: 6px 20px;
+  color: var(--bs-gray-400);
+  gap: 10px;
+}
+.targetItem:hover {
+  background-color: var(--bg-gray-100);
+}

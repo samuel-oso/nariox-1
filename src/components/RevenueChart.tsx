@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "../../src/styles/components/Revenue.css";
-import { Card } from "@mantine/core";
+import { Card, Collapse, Divider } from "@mantine/core";
 import Chart from "react-apexcharts";
 import { ApexOptions } from "apexcharts";
 import { FaEllipsisV } from "react-icons/fa";
@@ -130,6 +130,19 @@ const RevenueChart = () => {
         height={329}
         dir="ltr"
       />
+
+      <Collapse className="revenueCollapse" in={revenue}>
+        <div>
+          <p className="revenueItem">Today</p>
+          <p className="revenueItem">7 Days</p>
+          <p className="revenueItem">15 Days</p>
+          <Divider className="my-3" />
+          <p className="revenueItem">1 Month</p>
+          <p className="revenueItem">6 Months</p>
+          <Divider className="my-3" />
+          <p className="revenueItem"> 1 Year</p>
+        </div>
+      </Collapse>
     </Card>
   );
 };
