@@ -98,7 +98,10 @@ const TargetChart = () => {
     <Card className="targetCard">
       <div className="flex items-center justify-between">
         <h5 className="text-base font-semibold mb-0 ">TARGETS</h5>
-        <FaEllipsisV onClick={() => setTarget((o) => !o)} />
+        <FaEllipsisV
+          className="cursor-pointer"
+          onClick={() => setTarget((o) => !o)}
+        />
       </div>
       <Chart
         options={apexBarChartOpts}

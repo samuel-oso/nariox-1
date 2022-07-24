@@ -80,7 +80,10 @@ const SalesChart = () => {
     <Card>
       <div className="flex items-center justify-between">
         <h5 className="text-base font-semibold mb-0 ">SALES BY CATEGORY</h5>
-        <FaEllipsisV onClick={() => setSales((o) => !o)} />
+        <FaEllipsisV
+          className="cursor-pointer"
+          onClick={() => setSales((o) => !o)}
+        />
       </div>
       <Chart
         options={apexBarChartOpts}

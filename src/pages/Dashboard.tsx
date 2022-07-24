@@ -14,6 +14,7 @@ import RevenueChart from "../components/RevenueChart";
 import TargetChart from "../components/TargetChart";
 import Overview from "../components/Overview";
 import SalesChart from "../components/SalesChart";
+import RecentOrdersChart from "../components/RecentOrdersChart";
 
 const Dashboard = () => {
   const [download, setDownload] = useState(false);
@@ -60,9 +61,13 @@ const Dashboard = () => {
             </div>
           </Grid.Col>
         </Grid>
-
         <div>
-          <SalesChart />
+          <div>
+            <SalesChart />
+          </div>
+          <div>
+            <RecentOrdersChart />
+          </div>
         </div>
       </div>
 

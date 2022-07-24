@@ -120,7 +120,10 @@ const RevenueChart = () => {
     <Card className="revenueCard">
       <div className="flex items-center justify-between">
         <h5 className="text-base font-semibold mb-0 ">REVENUE</h5>
-        <FaEllipsisV onClick={() => setRevenue((o) => !o)} />
+        <FaEllipsisV
+          className="cursor-pointer"
+          onClick={() => setRevenue((o) => !o)}
+        />
       </div>
       <Chart
         options={apexBarChartOpts}

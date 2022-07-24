@@ -57,4 +57,5 @@
 }
 .ellipseItem:hover {
   background-color: var(--bg-gray-100);
+  cursor: pointer;
 }

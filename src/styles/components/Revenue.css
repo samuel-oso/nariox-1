@@ -30,6 +30,10 @@
 .revenueItem {
   padding: 6px 19px;
 }
+.revenueItem:hover {
+  background-color: var(--bg-gray-100);
+  cursor: pointer;
+}
 @media (min-width: 1280px) {
   .revenueCard {
     height: 432px;
