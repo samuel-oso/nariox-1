@@ -14,7 +14,8 @@ import RevenueChart from "../components/RevenueChart";
 import TargetChart from "../components/TargetChart";
 import Overview from "../components/Overview";
 import SalesChart from "../components/SalesChart";
-import RecentOrdersChart from "../components/RecentOrdersChart";
+import RecentOrdersTable from "../components/RecentOrdersTable";
+import { orderDetails } from "../data/data";
 
 const Dashboard = () => {
   const [download, setDownload] = useState(false);
@@ -61,14 +62,15 @@ const Dashboard = () => {
             </div>
           </Grid.Col>
         </Grid>
-        <div>
-          <div>
+
+        <Grid>
+          <Grid.Col lg={6}>
             <SalesChart />
-          </div>
-          <div>
-            <RecentOrdersChart />
-          </div>
-        </div>
+          </Grid.Col>
+          <Grid.Col lg={6}>
+            <RecentOrdersTable orderDetails={orderDetails} />
+          </Grid.Col>
+        </Grid>
       </div>
 
       {/* Download Button collapse */}

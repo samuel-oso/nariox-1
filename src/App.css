@@ -31,12 +31,17 @@ body {
   --bs-primary: #5369f8;
   --bs-primary-hover: #0a29f5;
   --bg-body: #f3f4f7;
+  --bg-chart-100: rgba(255, 190, 11, 0.18);
+  --bg-chart-200: rgba(67, 211, 158, 0.18);
+  --bg-chart-300: rgba(255, 92, 117, 0.18);
   --success: #43d39e;
   --danger: #ff5c75;
   --chart-100: #727cf5;
   --chart-200: #f77e53;
   --chart-300: #43d39e;
   --chart-400: #ffbe0b;
+  --chart-500: #ff5c75;
+  --chart-600: #5369f8;
 }
 
 .Appshell {
