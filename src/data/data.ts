@@ -236,7 +236,6 @@ const orderDetails: OrdersItemTypes[] = [
     status: "Declined",
   },
 ];
-export { orderDetails };
 
 interface topPerformers {
   icons?: string;
@@ -296,4 +295,22 @@ export const tasksList = [
     h5: "Full quarterly report to be done",
     p: "Due on the 9th August, 2022",
   },
+  {
+    h5: "Draw out the layout",
+    p: "Due on the 29th July, 2022",
+  },
 ];
+
+export interface Point {
+  x: number;
+  y: number;
+}
+export interface ApexLinearChartData {
+  [key: string]: number[] | Point[] | [number, number][];
+}
+const lineChartWithData: ApexLinearChartData = {
+  data1: [28, 29, 33, 36, 32, 32, 33],
+  data2: [12, 11, 14, 18, 17, 13, 13],
+};
+
+export { orderDetails, lineChartWithData };
