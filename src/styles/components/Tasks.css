@@ -1,0 +1,39 @@
+.taskCard {
+  padding: 20px;
+  border: 1px solid var(--gray);
+  background-color: var(--white);
+  word-wrap: break-word;
+  border-radius: 4px;
+  background-color: var(--white);
+  margin-bottom: 24px;
+}
+.taskHeading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+.taskCard button {
+  background-color: var(--chart-600);
+  padding: 4.5px 8px;
+  color: var(--white);
+  height: 35px;
+  font-size: 13px;
+  font-weight: 400;
+}
+.taskCheckbox {
+  margin-bottom: 18px;
+  align-items: flex-start;
+}
+.taskCheckbox input:checked {
+  background-color: var(--chart-600);
+  color: var(--white);
+}
+.taskCheckbox h5 {
+  color: var(--bs-gray-400);
+  font-weight: 600;
+}
+.taskCheckbox p {
+  color: var(--bs-gray-300);
+  font-size: 13px;
+}

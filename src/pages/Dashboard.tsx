@@ -17,6 +17,7 @@ import SalesChart from "../components/SalesChart";
 import RecentOrdersTable from "../components/RecentOrdersTable";
 import { orderDetails } from "../data/data";
 import TopPerformers from "../components/TopPerformers";
+import Tasks from "../components/Tasks";
 
 const Dashboard = () => {
   const [download, setDownload] = useState(false);
@@ -74,7 +75,12 @@ const Dashboard = () => {
         </Grid>
 
         <div>
-          <TopPerformers />
+          <div>
+            <TopPerformers />
+          </div>
+          <div>
+            <Tasks />
+          </div>
         </div>
       </div>
 
