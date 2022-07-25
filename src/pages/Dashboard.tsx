@@ -16,6 +16,7 @@ import Overview from "../components/Overview";
 import SalesChart from "../components/SalesChart";
 import RecentOrdersTable from "../components/RecentOrdersTable";
 import { orderDetails } from "../data/data";
+import TopPerformers from "../components/TopPerformers";
 
 const Dashboard = () => {
   const [download, setDownload] = useState(false);
@@ -71,6 +72,10 @@ const Dashboard = () => {
             <RecentOrdersTable orderDetails={orderDetails} />
           </Grid.Col>
         </Grid>
+
+        <div>
+          <TopPerformers />
+        </div>
       </div>
 
       {/* Download Button collapse */}

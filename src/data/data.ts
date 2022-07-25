@@ -32,6 +32,13 @@ import { TbUsers } from "react-icons/tb";
 import { HiOutlinePhotograph } from "react-icons/hi";
 import { CgShoppingBag } from "react-icons/cg";
 
+import profile1 from "../../src/images/profile1.jpg";
+import profile2 from "../images/profile2.webp";
+import profile3 from "../images/profile3.webp";
+import profile4 from "../images/profile4.webp";
+import profile5 from "../images/profile5.webp";
+import { FaEllipsisV } from "react-icons/fa";
+
 export const navContent = [
   {
     img: user2,
@@ -227,6 +234,43 @@ const orderDetails: OrdersItemTypes[] = [
     customer: "Philips Daniels",
     price: "$869.51",
     status: "Declined",
+  },
+];
+
+interface topPerformers {
+  icons?: string;
+}
+
+export const topPerformers = [
+  {
+    img: profile1,
+    h5: "Don Mikel",
+    p: "Product Manager",
+    icon: FaEllipsisV,
+  },
+  {
+    img: profile2,
+    h5: "Abraham Brood",
+    p: "Sales Rep",
+    icon: FaEllipsisV,
+  },
+  {
+    img: profile3,
+    h5: "Samuel Oyedele",
+    p: "Marketing Lead",
+    icon: FaEllipsisV,
+  },
+  {
+    img: profile4,
+    h5: "Dami Uche",
+    p: "Human Resources",
+    icon: FaEllipsisV,
+  },
+  {
+    img: profile5,
+    h5: "Mohammed Ismail",
+    p: "Managing Director",
+    icon: FaEllipsisV,
   },
 ];
 
