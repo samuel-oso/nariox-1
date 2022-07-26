@@ -2,6 +2,7 @@ import Layout from "../components/Layout";
 import "../styles/pages/Analytics.css";
 import AnalyticsOverview from "../components/analyticsOverview/AnalyticsOverview";
 import NewUsers from "../components/NewUsers";
+import { Grid } from "@mantine/core";
 
 const Analytics = () => {
   return (
@@ -10,14 +11,15 @@ const Analytics = () => {
         <div>
           <h4>Analytics</h4>
         </div>
-        <div>
-          <div>
+
+        <Grid>
+          <Grid.Col lg={8}>
             <AnalyticsOverview />
-          </div>
-          <div>
+          </Grid.Col>
+          <Grid.Col lg={4}>
             <NewUsers />
-          </div>
-        </div>
+          </Grid.Col>
+        </Grid>
       </div>
     </Layout>
   );

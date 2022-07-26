@@ -6,6 +6,7 @@
   border-radius: 4px;
   background-color: var(--white);
   margin-bottom: 24px;
+  position: relative;
 }
 .mantine-1u25t5n .__mantine-ref-tabsList {
   flex-direction: column;
@@ -38,7 +39,8 @@
   border-radius: 4px;
   position: absolute;
   inset: 0px 0px auto auto;
-  transform: translate3d(-37px, 107px, 0px);
+  transform: translate3d(-10px, 42px, 0px);
+  padding: 4px 0;
 }
 .ellipseItem {
   display: flex;

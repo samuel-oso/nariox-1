@@ -6,6 +6,7 @@
   border-radius: 4px;
   background-color: var(--white);
   margin-bottom: 24px;
+  position: relative;
 }
 .statsWidget {
   display: flex;
@@ -32,7 +33,7 @@
   border-radius: 4px;
   position: absolute;
   inset: 0px 0px auto auto;
-  transform: translate3d(-35px, 885px, 0px);
+  transform: translate3d(-12px, 42px, 0px);
 }
 .userItem {
   display: flex;
@@ -44,9 +45,4 @@
 .userItem:hover {
   background-color: var(--bg-gray-100);
   cursor: pointer;
-}
-@media (min-width: 768px) {
-  .userCollapse {
-    transform: translate3d(-35px, 705px, 0px);
-  }
 }

@@ -11,17 +11,17 @@ const NewUsers = () => {
 
   return (
     <div className="newUsersCard">
+      <div className="flex items-center justify-between mb-3">
+        <h5 className="text-base font-semibold mb-0 ">NEW USERS</h5>
+        <FaEllipsisV
+          className="cursor-pointer"
+          onClick={() => setUsers((o) => !o)}
+        />
+      </div>
       <div
         style={{ borderBottom: "var(--border-bottom)" }}
         className="pt-3 pb-6"
       >
-        <div className="flex items-center justify-between mb-3">
-          <h5 className="text-base font-semibold mb-0 ">NEW USERS</h5>
-          <FaEllipsisV
-            className="cursor-pointer"
-            onClick={() => setUsers((o) => !o)}
-          />
-        </div>
         <StatsWidget
           title="New users this week"
           stats="13,000"

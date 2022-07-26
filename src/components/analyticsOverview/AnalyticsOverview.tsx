@@ -37,7 +37,7 @@ const AnalyticsOverview = () => {
           label={
             <div className="flex flex-col items-start">
               <p>Total views</p>
-              <h1>3.981</h1>
+              <h1>3,981</h1>
             </div>
           }
         >
@@ -55,7 +55,7 @@ const AnalyticsOverview = () => {
         </Tabs.Tab>
       </Tabs>
 
-      <Collapse in={overview} className="ellipseCollapse">
+      <Collapse className="ellipseCollapse" in={overview}>
         <div className="py-1">
           <div className="ellipseItem">
             <TbRefreshDot />
