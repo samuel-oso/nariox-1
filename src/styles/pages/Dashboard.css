@@ -1,3 +1,8 @@
+h4 {
+  color: var(--bs-gray-dark);
+  font-size: 17px;
+  font-weight: 500;
+}
 .downloadCollapse {
   background-color: var(--white);
   box-shadow: var(--box-shadow);

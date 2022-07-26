@@ -1,13 +1,17 @@
 import Layout from "../components/Layout";
-import { Container } from "@mantine/core";
+import "../styles/pages/Analytics.css";
+import AnalyticsOverview from "../components/analyticsOverview/AnalyticsOverview";
 
 const Analytics = () => {
   return (
     <Layout>
       <div className="main-container">
-        <Container style={{ paddingLeft: 0, paddingRight: 0 }} size="lg">
-          <div>some moreeeeeeeeee dummy text</div>
-        </Container>
+        <div>
+          <h4>Analytics</h4>
+        </div>
+        <div>
+          <AnalyticsOverview />
+        </div>
       </div>
     </Layout>
   );

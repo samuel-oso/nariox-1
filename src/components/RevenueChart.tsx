@@ -71,6 +71,8 @@ const RevenueChart = () => {
       },
       labels: {
         show: true,
+        rotate: -45,
+        rotateAlways: true,
         style: {
           colors: "var(--bs-gray-300)",
           fontSize: "11px",

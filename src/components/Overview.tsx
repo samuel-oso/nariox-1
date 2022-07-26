@@ -26,7 +26,7 @@ const Overview = () => {
         return (
           <div className="dashboardOverview">
             <div>
-              <h3 className="text-xl mb-1.5">{props.h3}</h3>
+              <h3>{props.h3}</h3>
               <p>{props.p}</p>
             </div>
             <props.icon className="overviewSVG" style={iconStyle} />

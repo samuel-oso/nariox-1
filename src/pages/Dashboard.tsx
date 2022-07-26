@@ -27,12 +27,7 @@ const Dashboard = () => {
     <Layout>
       <div className="main-container">
         <div className="flex flex-col items-start gap-6 mb-8 md:flex-row md:justify-between md:items-center">
-          <h4
-            style={{ color: "var(--bs-gray-dark" }}
-            className="text-base font-medium "
-          >
-            Dashboard
-          </h4>
+          <h4>Dashboard</h4>
           <div className="flex gap-4 w-full flex-col md:flex-row md:w-fit">
             <DatePicker />
             <Button

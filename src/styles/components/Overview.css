@@ -19,6 +19,12 @@
 .overview h1 {
   color: var(--bs-gray-dark);
 }
+.dashboardOverview h3 {
+  color: var(--bs-gray-dark);
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
 .overviewSVG {
   fill: var(--svg-active-fill);
   color: var(--bs-gray-300);
