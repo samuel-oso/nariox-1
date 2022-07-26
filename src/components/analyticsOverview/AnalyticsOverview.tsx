@@ -1,8 +1,8 @@
-import React from "react";
 import "../../styles/components/AnalyticsOverview.css";
 import { FaEllipsisV } from "react-icons/fa";
 import { Tabs } from "@mantine/core";
 import SubscribersChart from "./SubscribersChart";
+import TotalViewsChart from "./TotalViewsChart";
 
 const AnalyticsOverview = () => {
   return (
@@ -31,7 +31,7 @@ const AnalyticsOverview = () => {
             </div>
           }
         >
-          Messages tab content
+          <TotalViewsChart />
         </Tabs.Tab>
         <Tabs.Tab
           label={
