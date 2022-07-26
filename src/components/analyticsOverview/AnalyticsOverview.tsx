@@ -3,6 +3,7 @@ import { FaEllipsisV } from "react-icons/fa";
 import { Tabs } from "@mantine/core";
 import SubscribersChart from "./SubscribersChart";
 import TotalViewsChart from "./TotalViewsChart";
+import BounceRateChart from "./BounceRateChart";
 
 const AnalyticsOverview = () => {
   return (
@@ -41,7 +42,7 @@ const AnalyticsOverview = () => {
             </div>
           }
         >
-          Settings tab content
+          <BounceRateChart />
         </Tabs.Tab>
       </Tabs>
     </div>

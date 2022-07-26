@@ -48,11 +48,6 @@ const TotalViewsChart = () => {
     colors: ["var(--bs-primary)", "var(--danger)"],
     yaxis: [
       {
-        title: {
-          // text: 'Series A',
-        },
-      },
-      {
         opposite: true,
         labels: {
           show: false,
@@ -72,7 +67,7 @@ const TotalViewsChart = () => {
       },
     },
     grid: {
-      borderColor: "#f1f3fa",
+      borderColor: "var(--bs-gray-500)",
       padding: {
         bottom: 5,
       },
