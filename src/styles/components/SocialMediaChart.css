@@ -1,64 +1,49 @@
-.analyticsOverview-Card {
+.socialCard {
   padding: 20px;
   border: 1px solid var(--gray);
   background-color: var(--white);
   word-wrap: break-word;
   border-radius: 4px;
   background-color: var(--white);
-  margin-bottom: 8px;
+  margin-bottom: 24px;
   position: relative;
-}
-.mantine-1u25t5n .__mantine-ref-tabsList {
-  flex-direction: column;
-  align-items: flex-start;
-}
-.mantine-pbt5fb.__mantine-ref-tabActive {
-  border-bottom-color: var(--bs-primary);
-}
-.mantine-Tabs-tabControl {
-  padding: 10px 20px;
   width: 100%;
-  display: flex;
-  height: 90.89px;
+  margin: 0 auto;
 }
-.analytics-Tab p {
+.socialCard-Content h6 {
   color: var(--bs-gray-300);
-  font-weight: 500;
   margin: 10px 0;
+  font-weight: 500;
 }
-.analytics-Tab h1 {
+.socialCard-Content h3 {
+  font-size: 21.67px;
   color: var(--bs-gray-dark);
-  font-size: 21.36px;
   margin: 10px 0;
   font-weight: 500;
 }
-.ellipseCollapse {
+.mediaCollapse {
   background-color: var(--white);
   box-shadow: var(--box-shadow);
   width: 160px;
   border-radius: 4px;
   position: absolute;
   inset: 0px 0px auto auto;
-  transform: translate3d(-10px, 42px, 0px);
-  padding: 4px 0;
+  transform: translate3d(-12px, 42px, 0px);
 }
-.ellipseItem {
+.mediaItem {
   display: flex;
   align-items: center;
   padding: 6px 20px;
   color: var(--bs-gray-400);
   gap: 10px;
 }
-.ellipseItem:hover {
+.mediaItem:hover {
   background-color: var(--bg-gray-100);
   cursor: pointer;
 }
 
 @media (min-width: 768px) {
-  .mantine-1u25t5n .__mantine-ref-tabsList {
-    flex-direction: row;
-  }
-  .mantine-Tabs-tabControl {
-    width: initial;
+  .socialCard-Content {
+    margin-left: 8.3%;
   }
 }

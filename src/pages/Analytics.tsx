@@ -1,8 +1,9 @@
 import Layout from "../components/Layout";
 import "../styles/pages/Analytics.css";
+import { Grid } from "@mantine/core";
 import AnalyticsOverview from "../components/analyticsOverview/AnalyticsOverview";
 import NewUsers from "../components/NewUsers";
-import { Grid } from "@mantine/core";
+import SocialMediaChart from "../components/SocialMediaChart";
 
 const Analytics = () => {
   return (
@@ -20,6 +21,10 @@ const Analytics = () => {
             <NewUsers />
           </Grid.Col>
         </Grid>
+
+        <div>
+          <SocialMediaChart />
+        </div>
       </div>
     </Layout>
   );

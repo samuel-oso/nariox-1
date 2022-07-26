@@ -60,10 +60,24 @@ const SubscribersChart = () => {
         formatter: function (val) {
           return (val / 1000000).toFixed(0);
         },
+        style: {
+          colors: "var(--bs-gray-300)",
+          fontSize: "11px",
+          fontFamily: "IBM Plex Sans, sans-serif",
+          fontWeight: 700,
+        },
       },
     },
     xaxis: {
       type: "datetime",
+      labels: {
+        style: {
+          colors: "var(--bs-gray-300)",
+          fontSize: "11px",
+          fontFamily: "IBM Plex Sans, sans-serif",
+          fontWeight: 700,
+        },
+      },
     },
     tooltip: {
       shared: false,

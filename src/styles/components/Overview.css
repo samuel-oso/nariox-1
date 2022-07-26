@@ -1,7 +1,7 @@
 .overview {
   border: 1px solid var(--gray);
   background-color: var(--white);
-  margin-bottom: 24px;
+  margin-bottom: 8px;
   border-radius: 4px;
   position: relative;
 }
