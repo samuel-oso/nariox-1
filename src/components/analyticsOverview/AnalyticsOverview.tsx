@@ -5,11 +5,9 @@ import { Tabs } from "@mantine/core";
 import SubscribersChart from "./SubscribersChart";
 import TotalViewsChart from "./TotalViewsChart";
 import BounceRateChart from "./BounceRateChart";
-import { FiUserPlus } from "react-icons/fi";
-import { TbLogout } from "react-icons/tb";
+import { BiExport } from "react-icons/bi";
 import { TbRefreshDot } from "react-icons/tb";
-
-import { Collapse, Divider } from "@mantine/core";
+import { Collapse } from "@mantine/core";
 
 const AnalyticsOverview = () => {
   const [overview, setOverview] = useState(false);
@@ -61,16 +59,11 @@ const AnalyticsOverview = () => {
         <div className="py-1">
           <div className="ellipseItem">
             <TbRefreshDot />
-            <p>Refresh</p>
+            <p>Refresh Report</p>
           </div>
           <div className="ellipseItem">
-            <FiUserPlus />
-            <p>Add New</p>
-          </div>
-          <Divider className="my-3" />
-          <div style={{ color: "var(--danger)" }} className="ellipseItem">
-            <TbLogout />
-            <p>Exit</p>
+            <BiExport />
+            <p>Export Report</p>
           </div>
         </div>
       </Collapse>

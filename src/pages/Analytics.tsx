@@ -1,6 +1,7 @@
 import Layout from "../components/Layout";
 import "../styles/pages/Analytics.css";
 import AnalyticsOverview from "../components/analyticsOverview/AnalyticsOverview";
+import NewUsers from "../components/NewUsers";
 
 const Analytics = () => {
   return (
@@ -10,7 +11,12 @@ const Analytics = () => {
           <h4>Analytics</h4>
         </div>
         <div>
-          <AnalyticsOverview />
+          <div>
+            <AnalyticsOverview />
+          </div>
+          <div>
+            <NewUsers />
+          </div>
         </div>
       </div>
     </Layout>
