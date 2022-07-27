@@ -12,7 +12,7 @@ const EngagementOverview = ({
 }: EngagementOverviewsProps) => {
   return (
     <div className="socialTable-card">
-      <div className="flex items-center justify-between ">
+      <div className="flex items-center justify-between gap-6">
         <h5 style={{ color: "var(--bs-gray-dark)" }} className="font-semibold">
           ENGAGEMENT OVERVIEWS
         </h5>

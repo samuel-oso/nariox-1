@@ -32,23 +32,27 @@ const Analytics = () => {
           </Grid.Col>
         </Grid>
 
-        <div>
-          <SocialMediaChart />
-        </div>
-        <div>
-          <div>
-            <Sources sources={sources} />
-          </div>
-          <div>
-            <EngagementOverview engagementOverviews={engagementOverviews} />
-          </div>
-          <div>
-            <Platforms platforms={platforms} />
-          </div>
-          <div>
-            <Channels channels={channels} />
-          </div>
-        </div>
+        <Grid>
+          <Grid.Col lg={6}>
+            <SocialMediaChart />
+          </Grid.Col>
+          <Grid.Col lg={6}>
+            <Grid>
+              <Grid.Col md={6}>
+                <Sources sources={sources} />
+              </Grid.Col>
+              <Grid.Col md={6}>
+                <EngagementOverview engagementOverviews={engagementOverviews} />
+              </Grid.Col>
+              <Grid.Col md={6}>
+                <Platforms platforms={platforms} />
+              </Grid.Col>
+              <Grid.Col md={6}>
+                <Channels channels={channels} />
+              </Grid.Col>
+            </Grid>
+          </Grid.Col>
+        </Grid>
       </div>
     </Layout>
   );
