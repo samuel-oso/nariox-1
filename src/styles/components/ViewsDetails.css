@@ -1,0 +1,57 @@
+.viewDetails-Card {
+  padding: 20px;
+  border: 1px solid var(--gray);
+  background-color: var(--white);
+  word-wrap: break-word;
+  border-radius: 4px;
+  background-color: var(--white);
+  margin-bottom: 8px;
+  position: relative;
+}
+.viewDetails-Export {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--bs-primary);
+  font-size: 16px;
+}
+.viewDetails-Export:hover {
+  color: var(--bs-primary-hover);
+}
+.viewDetails-Table {
+  overflow-x: auto;
+  margin-top: 15px;
+}
+.viewDetails-Table table {
+  width: 450px;
+}
+.viewDetails-Table thead tr th {
+  color: var(--bs-gray-400);
+  padding: 13.6px;
+  height: 49.2px;
+  line-height: 1px;
+}
+.viewDetails-Table tbody tr td {
+  color: var(--bs-gray-300);
+  padding: 13.6px;
+  height: 49.2px;
+  line-height: 1px;
+}
+@media (min-width: 760px) {
+  .viewDetails-Table table {
+    width: 100%;
+  }
+}
+/* .page {
+  width: 226px !important;
+  height: 50px !important;
+}
+.bounceRate {
+  width: 108px !important;
+  height: 50px !important;
+}
+.trafficType {
+  width: 103px !important;
+  height: 50px !important;
+} */

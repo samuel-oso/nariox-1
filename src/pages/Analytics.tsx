@@ -10,10 +10,12 @@ import {
   engagementOverviews,
   platforms,
   channels,
+  viewsDetails,
 } from "../data/data";
 import EngagementOverview from "../components/EngagementOverview";
 import Platforms from "../components/Platforms";
 import Channels from "../components/Channels";
+import ViewsDetails from "../components/ViewDetails";
 
 const Analytics = () => {
   return (
@@ -53,6 +55,10 @@ const Analytics = () => {
             </Grid>
           </Grid.Col>
         </Grid>
+
+        <div>
+          <ViewsDetails viewsDetails={viewsDetails} />
+        </div>
       </div>
     </Layout>
   );

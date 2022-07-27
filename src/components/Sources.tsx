@@ -19,26 +19,28 @@ const Sources = ({ sources }: SourcesProps) => {
           <BiExport />
         </div>
       </div>
-      <Table className="mt-4">
-        <thead>
-          <tr>
-            <th>Types</th>
-            <th style={{ width: "30%" }}>Sessions</th>
-            <th style={{ width: "30%" }}>Views</th>
-          </tr>
-        </thead>
-        <tbody>
-          {(sources || []).map((item, index) => {
-            return (
-              <tr key={index}>
-                <td>{item.types}</td>
-                <td>{item.sessions}</td>
-                <td>{item.views}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </Table>
+      <div className="socialMedia-table">
+        <Table className="mt-4">
+          <thead>
+            <tr>
+              <th>Types</th>
+              <th style={{ width: "30%" }}>Sessions</th>
+              <th style={{ width: "30%" }}>Views</th>
+            </tr>
+          </thead>
+          <tbody>
+            {(sources || []).map((item, index) => {
+              return (
+                <tr key={index}>
+                  <td>{item.types}</td>
+                  <td>{item.sessions}</td>
+                  <td>{item.views}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
+      </div>
     </div>
   );
 };

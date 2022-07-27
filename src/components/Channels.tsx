@@ -20,32 +20,34 @@ const Channels = ({ channels }: ChannelsProps) => {
           <BiExport />
         </div>
       </div>
-      <Table className="mt-4">
-        <thead>
-          <tr>
-            <th>Channel</th>
-            <th>Visits</th>
-            <th style={{ width: "40%" }}></th>
-          </tr>
-        </thead>
-        <tbody>
-          {(channels || []).map((item, index) => {
-            return (
-              <tr key={index}>
-                <td>{item.channel}</td>
-                <td>{item.visits}</td>
-                <td>
-                  <Progress
-                    value={item.progress}
-                    style={{ height: "3px" }}
-                    color={item.color && item.color}
-                  />
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </Table>
+      <div className="socialMedia-table">
+        <Table className="mt-4">
+          <thead>
+            <tr>
+              <th>Channel</th>
+              <th>Visits</th>
+              <th style={{ width: "40%" }}></th>
+            </tr>
+          </thead>
+          <tbody>
+            {(channels || []).map((item, index) => {
+              return (
+                <tr key={index}>
+                  <td>{item.channel}</td>
+                  <td>{item.visits}</td>
+                  <td>
+                    <Progress
+                      value={item.progress}
+                      style={{ height: "3px" }}
+                      color={item.color && item.color}
+                    />
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
+      </div>
     </div>
   );
 };

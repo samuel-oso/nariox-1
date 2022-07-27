@@ -20,28 +20,30 @@ const Platforms = ({ platforms }: PlatformsProps) => {
           <BiExport />
         </div>
       </div>
-      <Table className="mt-4">
-        <thead>
-          <tr>
-            <th>System</th>
-            <th>Visits</th>
-            <th style={{ width: "40%" }}></th>
-          </tr>
-        </thead>
-        <tbody>
-          {(platforms || []).map((item, index) => {
-            return (
-              <tr key={index}>
-                <td>{item.system}</td>
-                <td>{item.visits}</td>
-                <td>
-                  <Progress value={item.progress} style={{ height: "3px" }} />
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </Table>
+      <div className="socialMedia-table">
+        <Table className="mt-4">
+          <thead>
+            <tr>
+              <th>System</th>
+              <th>Visits</th>
+              <th style={{ width: "40%" }}></th>
+            </tr>
+          </thead>
+          <tbody>
+            {(platforms || []).map((item, index) => {
+              return (
+                <tr key={index}>
+                  <td>{item.system}</td>
+                  <td>{item.visits}</td>
+                  <td>
+                    <Progress value={item.progress} style={{ height: "3px" }} />
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
+      </div>
     </div>
   );
 };

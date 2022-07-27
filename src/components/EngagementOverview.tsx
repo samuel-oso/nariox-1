@@ -21,26 +21,28 @@ const EngagementOverview = ({
           <BiExport />
         </div>
       </div>
-      <Table className="mt-4">
-        <thead>
-          <tr>
-            <th>Duration (Secs) </th>
-            <th style={{ width: "30%" }}>Sessions</th>
-            <th style={{ width: "30%" }}>Views</th>
-          </tr>
-        </thead>
-        <tbody>
-          {(engagementOverviews || []).map((item, index) => {
-            return (
-              <tr key={index}>
-                <td>{item.duration}</td>
-                <td>{item.sessions}</td>
-                <td>{item.views}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </Table>
+      <div className="socialMedia-table">
+        <Table className="mt-4">
+          <thead>
+            <tr>
+              <th>Duration (Secs) </th>
+              <th style={{ width: "30%" }}>Sessions</th>
+              <th style={{ width: "30%" }}>Views</th>
+            </tr>
+          </thead>
+          <tbody>
+            {(engagementOverviews || []).map((item, index) => {
+              return (
+                <tr key={index}>
+                  <td>{item.duration}</td>
+                  <td>{item.sessions}</td>
+                  <td>{item.views}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
+      </div>
     </div>
   );
 };

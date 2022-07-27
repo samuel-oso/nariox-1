@@ -20,3 +20,11 @@
 .socialTable-Export:hover {
   color: var(--bs-primary-hover);
 }
+.socialMedia-table thead tr th {
+  color: var(--bs-gray-dark);
+  font-size: 13px;
+}
+.socialMedia-table tbody tr td {
+  font-size: 13px;
+  color: var(--bs-gray-400);
+}
