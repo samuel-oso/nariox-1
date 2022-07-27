@@ -7,7 +7,12 @@ const Tasks = () => {
   return (
     <div className="taskCard">
       <div className="taskHeading">
-        <h5 className="text-base font-semibold mb-0 ">TASKS</h5>
+        <h5
+          style={{ color: "var(--bs-gray-dark)" }}
+          className="font-semibold mb-0 "
+        >
+          TASKS
+        </h5>
         <Button>View All</Button>
       </div>
 

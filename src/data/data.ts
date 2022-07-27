@@ -682,4 +682,107 @@ const dataSeries = [
   ],
 ];
 
-export { orderDetails, lineChartWithData, dataSeries };
+export interface SourcesTypes {
+  types: string;
+  sessions: number;
+  views: number;
+}
+const sources: SourcesTypes[] = [
+  {
+    types: "Direct",
+    sessions: 358,
+    views: 250,
+  },
+  {
+    types: "Referal",
+    sessions: 501,
+    views: 50,
+  },
+  {
+    types: "Email",
+    sessions: 460,
+    views: 600,
+  },
+];
+
+export interface EngagementOverviewsTypes {
+  duration: string;
+  sessions: string;
+  views: string;
+}
+const engagementOverviews: EngagementOverviewsTypes[] = [
+  {
+    duration: "0-30",
+    sessions: "2,250",
+    views: "4,250",
+  },
+  {
+    duration: "31-60",
+    sessions: "1,501",
+    views: "2,050",
+  },
+  {
+    duration: "61-120",
+    sessions: "750",
+    views: "1,600",
+  },
+];
+
+export interface PlatformTypes {
+  system: string;
+  visits: string;
+  progress: number;
+}
+
+const platforms: PlatformTypes[] = [
+  {
+    system: "Linux",
+    visits: "2,250",
+    progress: 65,
+  },
+  {
+    system: "Android",
+    visits: "1,501",
+    progress: 45,
+  },
+  {
+    system: "Windows",
+    visits: "750",
+    progress: 30,
+  },
+];
+
+export interface ChannelsTypes {
+  channel: string;
+  visits: string;
+  progress: number;
+  color?: string;
+}
+const channels: ChannelsTypes[] = [
+  {
+    channel: "Direct",
+    visits: "2,050",
+    progress: 65,
+  },
+  {
+    channel: "Organic Search",
+    visits: "1,405",
+    progress: 45,
+    color: "var(--success)",
+  },
+  {
+    channel: "Social",
+    visits: "540",
+    progress: 25,
+    color: "var(--danger)",
+  },
+];
+export {
+  orderDetails,
+  lineChartWithData,
+  dataSeries,
+  sources,
+  engagementOverviews,
+  platforms,
+  channels,
+};

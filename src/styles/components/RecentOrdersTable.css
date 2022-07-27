@@ -19,7 +19,7 @@
 .badge-failed {
   padding: 6px 4.2px;
   background-color: var(--bg-chart-300);
-  color: var(--chart-500);
+  color: var(--danger);
   text-align: center;
   border-radius: 4px;
   font-weight: 600;
@@ -33,7 +33,7 @@
   margin-bottom: 16px;
 }
 .ordersCard button {
-  background-color: var(--chart-600);
+  background-color: var(--bs-primary);
   padding: 4.5px 8px;
   color: var(--white);
   height: 35px;

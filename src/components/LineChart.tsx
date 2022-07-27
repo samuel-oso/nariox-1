@@ -105,7 +105,12 @@ const LineChart = ({ lineChartWithData }: LineChartProps) => {
 
   return (
     <div className="lineCard">
-      <h5 className="text-base font-semibold mb-5 ">LINE CHART</h5>
+      <h5
+        style={{ color: "var(--bs-gray-dark)" }}
+        className="font-semibold mb-5 "
+      >
+        LINE CHART
+      </h5>
       <Chart
         options={apexLineChartWithLables}
         series={apexLineChartWithLablesData}

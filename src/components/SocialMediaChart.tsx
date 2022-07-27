@@ -100,7 +100,12 @@ const SocialMediaChart = () => {
   return (
     <div className="socialCard">
       <div className="flex items-center justify-between mb-3">
-        <h5 className="text-base font-semibold mb-0 ">SOCIAL MEDIA TRAFFIC</h5>
+        <h5
+          style={{ color: "var(--bs-gray-dark)" }}
+          className="font-semibold mb-0 "
+        >
+          SOCIAL MEDIA TRAFFIC
+        </h5>
         <FaEllipsisV
           className="cursor-pointer"
           onClick={() => setMedia((o) => !o)}

@@ -12,7 +12,12 @@ const NewUsers = () => {
   return (
     <div className="newUsersCard">
       <div className="flex items-center justify-between mb-3">
-        <h5 className="text-base font-semibold mb-0 ">NEW USERS</h5>
+        <h5
+          style={{ color: "var(--bs-gray-dark)" }}
+          className="font-semibold mb-0 "
+        >
+          NEW USERS
+        </h5>
         <FaEllipsisV
           className="cursor-pointer"
           onClick={() => setUsers((o) => !o)}
@@ -45,7 +50,7 @@ const NewUsers = () => {
             value: "-12.80%",
           }}
           type="line"
-          colors={["var(--chart-500)"]}
+          colors={["var(--danger)"]}
           data={[10, 20, 67, 42, 39, 20, 24, 12, 36, 9, 33]}
         />
       </div>
@@ -73,7 +78,7 @@ const NewUsers = () => {
             value: "-61.17%",
           }}
           type="line"
-          colors={["var(--chart-500)"]}
+          colors={["var(--danger)"]}
           data={[10, 20, 67, 42, 39, 20, 24, 12, 36, 9, 33]}
         />
       </div>

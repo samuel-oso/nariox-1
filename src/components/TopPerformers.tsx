@@ -15,7 +15,12 @@ const TopPerformers = () => {
   return (
     <div className="topCard">
       <div className="mb-6">
-        <h5 className="text-base font-semibold mb-0 ">TOP PERFORMERS</h5>
+        <h5
+          style={{ color: "var(--bs-gray-dark)" }}
+          className="font-semibold mb-0 "
+        >
+          TOP PERFORMERS
+        </h5>
       </div>
       {topPerformers.map((props) => {
         return (

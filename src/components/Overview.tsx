@@ -16,7 +16,9 @@ const Overview = () => {
   return (
     <div className="overview">
       <div className="flex items-center justify-between p-6">
-        <h4 className="text-base font-semibold">OVERVIEW</h4>
+        <h5 style={{ color: "var(--bs-gray-dark)" }} className="font-semibold">
+          OVERVIEW
+        </h5>
         <FaEllipsisV
           className="cursor-pointer"
           onClick={() => setOverview((o) => !o)}

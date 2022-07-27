@@ -1,0 +1,22 @@
+/* Sources */
+.socialTable-card {
+  padding: 20px;
+  border: 1px solid var(--gray);
+  background-color: var(--white);
+  word-wrap: break-word;
+  border-radius: 4px;
+  background-color: var(--white);
+  margin-bottom: 24px;
+  position: relative;
+}
+.socialTable-Export {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: var(--bs-primary);
+  font-size: 16px;
+}
+.socialTable-Export:hover {
+  color: var(--bs-primary-hover);
+}

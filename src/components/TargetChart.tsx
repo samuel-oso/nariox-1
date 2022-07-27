@@ -97,7 +97,12 @@ const TargetChart = () => {
   return (
     <Card className="targetCard">
       <div className="flex items-center justify-between">
-        <h5 className="text-base font-semibold mb-0 ">TARGETS</h5>
+        <h5
+          style={{ color: "var(--bs-gray-dark)" }}
+          className="font-semibold mb-0 "
+        >
+          TARGETS
+        </h5>
         <FaEllipsisV
           className="cursor-pointer"
           onClick={() => setTarget((o) => !o)}

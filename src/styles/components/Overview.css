@@ -15,7 +15,6 @@
 .overview p {
   color: var(--bs-gray-300);
 }
-.overview h4,
 .overview h1 {
   color: var(--bs-gray-dark);
 }

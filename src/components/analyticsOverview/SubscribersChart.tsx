@@ -36,7 +36,7 @@ const SubscribersChart = () => {
     markers: {
       size: 0,
     },
-    colors: ["var(--chart-600)"],
+    colors: ["var(--bs-primary)"],
     grid: {
       row: {
         colors: ["transparent", "transparent"],

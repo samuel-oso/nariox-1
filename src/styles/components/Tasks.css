@@ -15,7 +15,7 @@
   margin-bottom: 28px;
 }
 .taskCard button {
-  background-color: var(--chart-600);
+  background-color: var(--bs-primary);
   padding: 4.5px 8px;
   color: var(--white);
   height: 35px;
@@ -27,7 +27,7 @@
   align-items: flex-start;
 }
 .taskCheckbox input:checked {
-  background-color: var(--chart-600);
+  background-color: var(--bs-primary);
   color: var(--white);
 }
 .taskCheckbox h5 {
