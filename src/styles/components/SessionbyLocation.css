@@ -1,0 +1,30 @@
+.sessionLocation-Card {
+  padding: 20px;
+  border: 1px solid var(--gray);
+  background-color: var(--white);
+  word-wrap: break-word;
+  border-radius: 4px;
+  background-color: var(--white);
+  margin-bottom: 24px;
+  position: relative;
+}
+.locationCollapse {
+  background-color: var(--white);
+  box-shadow: var(--box-shadow);
+  width: 160px;
+  border-radius: 4px;
+  position: absolute;
+  inset: 0px 0px auto auto;
+  transform: translate3d(-12px, 42px, 0px);
+}
+.locationItem {
+  display: flex;
+  align-items: center;
+  padding: 6px 20px;
+  color: var(--bs-gray-400);
+  gap: 10px;
+}
+.locationItem:hover {
+  background-color: var(--bg-gray-100);
+  cursor: pointer;
+}

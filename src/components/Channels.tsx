@@ -10,7 +10,7 @@ interface ChannelsProps {
 
 const Channels = ({ channels }: ChannelsProps) => {
   return (
-    <div className="socialTable-card">
+    <div style={{ marginBottom: "24px" }} className=" socialTable-card">
       <div className="flex items-center justify-between ">
         <h5 style={{ color: "var(--bs-gray-dark)" }} className="font-semibold">
           CHANNELS

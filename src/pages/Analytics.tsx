@@ -16,6 +16,7 @@ import EngagementOverview from "../components/EngagementOverview";
 import Platforms from "../components/Platforms";
 import Channels from "../components/Channels";
 import ViewsDetails from "../components/ViewDetails";
+import SessionbyLocations from "../components/SessionbyLocations";
 
 const Analytics = () => {
   return (
@@ -57,7 +58,12 @@ const Analytics = () => {
         </Grid>
 
         <div>
-          <ViewsDetails viewsDetails={viewsDetails} />
+          <div>
+            <ViewsDetails viewsDetails={viewsDetails} />
+          </div>
+          <div>
+            <SessionbyLocations />
+          </div>
         </div>
       </div>
     </Layout>
