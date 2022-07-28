@@ -58,17 +58,17 @@ const Analytics = () => {
           </Grid.Col>
         </Grid>
 
-        <div>
-          <div>
+        <Grid>
+          <Grid.Col lg={4}>
             <ViewsDetails viewsDetails={viewsDetails} />
-          </div>
-          <div>
+          </Grid.Col>
+          <Grid.Col lg={4}>
             <SessionbyLocations />
-          </div>
-          <div>
+          </Grid.Col>
+          <Grid.Col lg={4}>
             <SessionbyBrowser />
-          </div>
-        </div>
+          </Grid.Col>
+        </Grid>
       </div>
     </Layout>
   );

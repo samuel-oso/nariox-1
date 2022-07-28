@@ -21,7 +21,7 @@ const SessionbyLocations = () => {
       </div>
       <iframe
         width="100%"
-        height="511"
+        height="90%"
         id="gmap_canvas"
         src="https://maps.google.com/maps?q=2880%20Broadway,%20New%20York&t=&z=13&ie=UTF8&iwloc=&output=embed"
         frameBorder="0"

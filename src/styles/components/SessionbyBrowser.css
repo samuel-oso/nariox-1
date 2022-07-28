@@ -7,6 +7,7 @@
   background-color: var(--white);
   margin-bottom: 24px;
   position: relative;
+  height: 523px;
 }
 .browserCollapse {
   background-color: var(--white);
