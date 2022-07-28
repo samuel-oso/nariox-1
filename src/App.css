@@ -69,7 +69,12 @@ body {
 .text-danger {
   color: var(--danger);
 }
-
+.text-primary {
+  color: var(--bs-primary);
+}
+.text-warning {
+  color: var(--chart-400);
+}
 @media (min-width: 1024px) {
   .mantine-kv8twf {
     margin-left: 75px;

@@ -17,6 +17,7 @@ import Platforms from "../components/Platforms";
 import Channels from "../components/Channels";
 import ViewsDetails from "../components/ViewDetails";
 import SessionbyLocations from "../components/SessionbyLocations";
+import SessionbyBrowser from "../components/SessionbyBrowser";
 
 const Analytics = () => {
   return (
@@ -63,6 +64,9 @@ const Analytics = () => {
           </div>
           <div>
             <SessionbyLocations />
+          </div>
+          <div>
+            <SessionbyBrowser />
           </div>
         </div>
       </div>

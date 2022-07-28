@@ -3,7 +3,6 @@ import "../styles/components/SessionbyLocation.css";
 import { BiExport } from "react-icons/bi";
 import { TbRefreshDot } from "react-icons/tb";
 import { Collapse } from "@mantine/core";
-
 import { FaEllipsisV } from "react-icons/fa";
 
 const SessionbyLocations = () => {
