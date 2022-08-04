@@ -4,6 +4,7 @@ import "@fullcalendar/react";
 import { DateClickArg } from "@fullcalendar/interaction";
 import { EventClickArg, EventInput } from "@fullcalendar/core";
 import { defaultEvents } from "../../data/data";
+import AddEditEvent from "./AddEditEvent";
 
 interface IntroCardProps {
   createNewEvent: () => void;
@@ -91,6 +92,18 @@ const Calendar = () => {
         onEventClick={onEventClick}
         events={events}
       />
+      {/* add new event modal */}
+      {show ? (
+        <AddEditEvent
+          isOpen={show}
+          onClose={onCloseModal}
+          isEditable={isEditable}
+          eventData={eventData}
+          onUpdateEvent={onUpdateEvent}
+          onRemoveEvent={onRemoveEvent}
+          onAddEvent={onAddEvent}
+        />
+      ) : null}
     </div>
   );
 };
