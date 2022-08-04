@@ -40,7 +40,6 @@ body {
   --chart-300: #43d39e;
   --chart-400: #ffbe0b;
 }
-
 .Appshell {
   background-color: var(--bg-body);
   width: 100%;
@@ -74,6 +73,18 @@ body {
 }
 .text-warning {
   color: var(--chart-400);
+}
+.bg-success {
+  background-color: var(--success);
+}
+.bg-danger {
+  background-color: var(--danger);
+}
+.bg-primary {
+  background-color: var(--bs-primary);
+}
+.bg-warning {
+  background-color: var(--chart-400);
 }
 @media (min-width: 1024px) {
   .mantine-kv8twf {
