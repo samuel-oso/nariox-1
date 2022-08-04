@@ -39,6 +39,8 @@ import profile4 from "../images/profile4.webp";
 import profile5 from "../images/profile5.webp";
 import { FaEllipsisV } from "react-icons/fa";
 
+import { EventInput } from "@fullcalendar/core";
+
 export const navContent = [
   {
     img: user2,
@@ -139,6 +141,7 @@ export const menuList = [
   {
     icon: TbCalendarPlus,
     p: "Calendar",
+    to: "/calendar",
   },
   {
     icon: TbBrandHipchat,
@@ -816,6 +819,37 @@ const viewsDetails: ViewsDetailTypes[] = [
     bounce_rate: "48.42%",
   },
 ];
+
+const defaultEvents: EventInput[] = [
+  {
+    id: "1",
+    title: "Interview - Backend Engineer",
+    start: new Date(),
+    className: "bg-success",
+  },
+  {
+    id: "2",
+    title: "Phone Screen - Frontend Engineer",
+    start: new Date().setDate(new Date().getDate() + 2),
+    className: "bg-info",
+  },
+  {
+    id: "3",
+    title: "Meeting with John Deo",
+    start: new Date().setDate(new Date().getDate() + 2),
+    end: new Date().setDate(new Date().getDate() + 4),
+    className: "bg-warning",
+  },
+  {
+    id: "4",
+    title: "Buy a Theme",
+    start: new Date().setDate(new Date().getDate() + 4),
+    end: new Date().setDate(new Date().getDate() + 5),
+    className: "bg-primary",
+  },
+];
+
+export { defaultEvents };
 
 export {
   orderDetails,
