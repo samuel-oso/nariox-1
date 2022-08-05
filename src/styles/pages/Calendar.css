@@ -1,0 +1,60 @@
+.calendarCard {
+  padding: 20px;
+  border: 1px solid var(--gray);
+  background-color: var(--white);
+  border-radius: 4px;
+  background-color: var(--white);
+  margin-bottom: 8px;
+}
+.fc .fc-toolbar {
+  flex-direction: column;
+  align-items: flex-start !important;
+}
+.fc-toolbar-title {
+  font-family: "IBM Plex Sans", sans-serif !important;
+  font-weight: 500 !important;
+  color: var(--bs-gray-dark) !important;
+  text-transform: uppercase !important;
+  font-size: 20px !important;
+}
+.fc-button {
+  box-shadow: none !important;
+}
+.fc .fc-button-group > .fc-button,
+.fc .fc-today-button {
+  padding: 4.48px 12.8px !important;
+  font-size: 12.6px !important;
+  background-color: var(--bs-primary);
+  border: none !important;
+}
+.fc .fc-today-button {
+  background-color: var(--chart-100) !important;
+}
+.fc .fc-button-primary:not(:disabled):active:focus,
+.fc .fc-button-primary:not(:disabled).fc-button-active:focus {
+  box-shadow: none !important;
+  background-color: var(--bg-400);
+}
+.fc .fc-button-primary:not(:disabled):active,
+.fc .fc-button-primary:not(:disabled).fc-button-active,
+.fc .fc-button-primary:hover {
+  background-color: var(--bg-400) !important;
+}
+.fc-view-harness {
+  height: 173.333px !important;
+}
+.fc-view {
+  margin-top: 10px !important;
+}
+.fc .fc-col-header-cell-cushion,
+.fc-theme-standard .fc-list-day-cushion {
+  color: var(--bs-gray-400) !important;
+  font-weight: 600 !important;
+}
+.fc-daygrid th {
+  height: 40px !important;
+  vertical-align: middle !important;
+}
+.fc-daygrid-day-frame {
+  height: 60px !important;
+}

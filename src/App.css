@@ -34,6 +34,7 @@ body {
   --bg-chart-100: rgba(255, 190, 11, 0.18);
   --bg-chart-200: rgba(67, 211, 158, 0.18);
   --bg-chart-300: rgba(255, 92, 117, 0.18);
+  --bg-400: #4254c6;
   --success: #43d39e;
   --chart-100: #727cf5;
   --chart-200: #f77e53;
