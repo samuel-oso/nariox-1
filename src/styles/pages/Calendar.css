@@ -40,9 +40,7 @@
 .fc .fc-button-primary:hover {
   background-color: var(--bg-400) !important;
 }
-.fc-view-harness {
-  height: 173.333px !important;
-}
+
 .fc-view {
   margin-top: 10px !important;
 }
@@ -57,4 +55,47 @@
 }
 .fc-daygrid-day-frame {
   height: 60px !important;
+}
+
+/* Modal styling */
+.modalInput,
+.modalSelect {
+  width: 100%;
+  border: 1px solid var(--gray);
+  padding: 7.2px 14.4px;
+  line-height: 1.5;
+  color: var(--bs-gray-400);
+  margin-top: 10px;
+  background-clip: padding-box;
+  border-radius: 5px;
+}
+.modalSelect {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAAdVBMVEUAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhMdQaAAAAJ3RSTlMAAAECAwQGBwsOFBwkJTg5RUZ4eYCHkJefpaytrsXGy8zW3+Do8vNn0bsyAAAAYElEQVR42tXROwJDQAAA0Ymw1p9kiT+L5P5HVEi3qJn2lcPjtIuzUIJ/rhIGy762N3XaThqMN1ZPALsZPEzG1x8LrFL77DHBnEMxBewz0fJ6LyFHTPL7xhwzWYrJ9z22AqmQBV757MHfAAAAAElFTkSuQmCC);
+  background-position: 100%;
+  background-repeat: no-repeat;
+}
+.form-label {
+  color: var(--bs-gray-400);
+  font-weight: 600;
+}
+.modalInput:focus,
+.modalSelect:focus {
+  outline: none;
+}
+.btn {
+  padding: 7.2px 14.4px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+.modalDelete {
+  background-color: var(--danger);
+}
+.modalClose {
+  color: var(--bs-gray-600);
+  background-color: var(--bg-500);
+}
+.modalSave {
+  background-color: var(--success);
 }

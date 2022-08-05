@@ -55,35 +55,38 @@ const AddEditEvent = ({
       <Modal
         opened={isOpen}
         onClose={onClose}
-        title={<h5>{isEditable ? "Edit Event" : "Add New Event"}</h5>}
+        title={
+          <h5 className="text-sm font-medium">
+            {isEditable ? "Edit Event" : "Add New Event"}
+          </h5>
+        }
       >
-        <div className="px-4 pb-4 pt-0">
+        <div>
           <form
             noValidate
             name="chat-form"
-            id="chat-form"
+            className="modalForm"
             onSubmit={handleSubmit(onSubmitEvent)}
           >
-            <div>
+            <div className="mt-6">
               <FormInput
                 type="text"
                 label="Event Name"
                 name="title"
-                className="form-control"
+                className="modalInput"
                 placeholder="Insert Event Name"
-                containerClass={"mb-3"}
                 register={register}
                 key="title"
                 errors={errors}
                 control={control}
               />
             </div>
-            <div>
+            <div className="mt-6">
               <FormInput
                 type="select"
                 label="Category"
                 name="className"
-                containerClass={"mb-3"}
+                className="modalSelect flex flex-col"
                 register={register}
                 key="className"
                 errors={errors}
@@ -92,23 +95,26 @@ const AddEditEvent = ({
                 <option value="bg-danger">Danger</option>
                 <option value="bg-success">Success</option>
                 <option value="bg-primary">Primary</option>
-                <option value="bg-info">Info</option>
-                <option value="bg-dark">Dark</option>
+
                 <option value="bg-warning">Warning</option>
               </FormInput>
             </div>
-            <div>
-              {isEditable ? (
-                <Button onClick={onRemoveEvent}>
-                  <Text>
-                    <p>Delete </p>
-                  </Text>
+            <div className="flex items-center justify-between mt-5">
+              <div>
+                {isEditable ? (
+                  <Button className="btn modalDelete" onClick={onRemoveEvent}>
+                    Delete
+                  </Button>
+                ) : null}
+              </div>
+              <div className="flex gap-2">
+                <Button className="btn modalClose" onClick={onClose}>
+                  Close
                 </Button>
-              ) : null}
-            </div>
-            <div>
-              <Button onClick={onClose}>Close</Button>
-              <Button type="submit">Save</Button>
+                <Button className="btn modalSave" type="submit">
+                  Save
+                </Button>
+              </div>
             </div>
           </form>
         </div>

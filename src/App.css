@@ -22,6 +22,7 @@ body {
   --bs-gray-300: #6c757d;
   --bs-gray-400: #4b4b5a;
   --bs-gray-500: #ebeef5;
+  --bs-gray-600: #212529;
   --svg-fill: rgba(75, 75, 90, 0.12);
   --svg-active-fill: rgba(83, 105, 248, 0.12);
   --bs-gray-dark: #343a40;
@@ -35,6 +36,7 @@ body {
   --bg-chart-200: rgba(67, 211, 158, 0.18);
   --bg-chart-300: rgba(255, 92, 117, 0.18);
   --bg-400: #4254c6;
+  --bg-500: #f8f9fa;
   --success: #43d39e;
   --chart-100: #727cf5;
   --chart-200: #f77e53;
