@@ -83,7 +83,6 @@ const AddEditEvent = ({
                 type="select"
                 label="Category"
                 name="className"
-                className="form-control"
                 containerClass={"mb-3"}
                 register={register}
                 key="className"
@@ -108,12 +107,8 @@ const AddEditEvent = ({
               ) : null}
             </div>
             <div>
-              <Button className="btn btn-light me-1" onClick={onClose}>
-                Close
-              </Button>
-              <Button type="submit" className="btn btn-success">
-                Save
-              </Button>
+              <Button onClick={onClose}>Close</Button>
+              <Button type="submit">Save</Button>
             </div>
           </form>
         </div>

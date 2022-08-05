@@ -1,10 +1,12 @@
 import React, { useState } from "react";
+import "../../styles/pages/Calendar.css";
 import CalendarComponent from "./CalendarComponent";
 import "@fullcalendar/react";
 import { DateClickArg } from "@fullcalendar/interaction";
 import { EventClickArg, EventInput } from "@fullcalendar/core";
 import { defaultEvents } from "../../data/data";
 import AddEditEvent from "./AddEditEvent";
+import Layout from "../../components/Layout";
 
 interface IntroCardProps {
   createNewEvent: () => void;
@@ -85,26 +87,27 @@ const Calendar = () => {
     onOpenModal();
   };
   return (
-    <div>
-      {" "}
-      <CalendarComponent
-        onDateClick={onDateClick}
-        onEventClick={onEventClick}
-        events={events}
-      />
-      {/* add new event modal */}
-      {show ? (
-        <AddEditEvent
-          isOpen={show}
-          onClose={onCloseModal}
-          isEditable={isEditable}
-          eventData={eventData}
-          onUpdateEvent={onUpdateEvent}
-          onRemoveEvent={onRemoveEvent}
-          onAddEvent={onAddEvent}
+    <Layout>
+      <div className="main-container">
+        <CalendarComponent
+          onDateClick={onDateClick}
+          onEventClick={onEventClick}
+          events={events}
         />
-      ) : null}
-    </div>
+        {/* add new event modal */}
+        {show ? (
+          <AddEditEvent
+            isOpen={show}
+            onClose={onCloseModal}
+            isEditable={isEditable}
+            eventData={eventData}
+            onUpdateEvent={onUpdateEvent}
+            onRemoveEvent={onRemoveEvent}
+            onAddEvent={onAddEvent}
+          />
+        ) : null}
+      </div>
+    </Layout>
   );
 };
 

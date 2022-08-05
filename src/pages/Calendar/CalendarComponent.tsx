@@ -1,4 +1,5 @@
 import React from "react";
+import "../../styles/pages/Calendar.css";
 import Layout from "../../components/Layout";
 import FullCalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
@@ -26,41 +27,34 @@ const CalendarComponent = ({
   };
 
   return (
-    <Layout>
-      <div className="main-container">
-        <FullCalendar
-          plugins={[
-            dayGridPlugin,
-            listPlugin,
-            interactionPlugin,
-            timeGridPlugin,
-          ]}
-          headerToolbar={{
-            left: "prev,next today",
-            center: "title",
-            right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
-          }}
-          buttonText={{
-            today: "Today",
-            month: "Month",
-            week: "Week",
-            day: "Day",
-            list: "List",
-            prev: "Prev",
-            next: "Next",
-          }}
-          initialView="dayGridMonth"
-          dayMaxEventRows={1}
-          editable={true}
-          selectable={true}
-          droppable={true}
-          handleWindowResize={true}
-          events={events}
-          dateClick={handleDateClick}
-          eventClick={handleEventClick}
-        />
-      </div>
-    </Layout>
+    <div className="calendarCard">
+      <FullCalendar
+        plugins={[dayGridPlugin, listPlugin, interactionPlugin, timeGridPlugin]}
+        headerToolbar={{
+          left: "prev,next today",
+          center: "title",
+          right: "dayGridMonth,timeGridWeek,timeGridDay,listMonth",
+        }}
+        buttonText={{
+          today: "Today",
+          month: "Month",
+          week: "Week",
+          day: "Day",
+          list: "List",
+          prev: "Prev",
+          next: "Next",
+        }}
+        initialView="dayGridMonth"
+        dayMaxEventRows={1}
+        editable={true}
+        selectable={true}
+        droppable={true}
+        handleWindowResize={true}
+        events={events}
+        dateClick={handleDateClick}
+        eventClick={handleEventClick}
+      />
+    </div>
   );
 };
 
