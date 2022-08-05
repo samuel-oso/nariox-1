@@ -40,7 +40,11 @@
 .fc .fc-button-primary:hover {
   background-color: var(--bg-400) !important;
 }
-
+.fc-event-time,
+.fc-event-title {
+  color: var(--white);
+  font-weight: 500 !important;
+}
 .fc-view {
   margin-top: 10px !important;
 }
@@ -98,4 +102,11 @@
 }
 .modalSave {
   background-color: var(--success);
+}
+
+@media (min-width: 1200px) {
+  .fc .fc-toolbar {
+    flex-direction: initial;
+    align-items: initial !important;
+  }
 }
