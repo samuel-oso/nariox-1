@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { EventInput } from "@fullcalendar/core";
-import { Button, Modal, Text } from "@mantine/core";
+import { Button, Modal } from "@mantine/core";
 import FormInput from "../../components/FormInput";
 
 interface AddEditEventProps {
@@ -95,7 +95,6 @@ const AddEditEvent = ({
                 <option value="bg-danger">Danger</option>
                 <option value="bg-success">Success</option>
                 <option value="bg-primary">Primary</option>
-
                 <option value="bg-warning">Warning</option>
               </FormInput>
             </div>
