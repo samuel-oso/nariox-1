@@ -146,6 +146,7 @@ export const menuList = [
   {
     icon: TbBrandHipchat,
     p: "Chat",
+    to: "/chat",
   },
   {
     icon: TbMail,
