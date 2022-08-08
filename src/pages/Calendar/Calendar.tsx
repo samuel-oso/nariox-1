@@ -20,15 +20,15 @@ const IntroCard = ({ createNewEvent }: IntroCardProps) => {
   return (
     <div className="calendarCard introCard">
       <img src={calendarImage} />
-      <div>
+      <div className="mt-7">
         <h5>Welcome to Your Calendar</h5>
-        <p>
+        <p className="mt-1">
           The calendar shows the events synced from all your linked calendars.
           Click on event to see or edit the details. You can create new event by
           clicking on "Create New event" button or any cell available in
           calendar below.
         </p>
-        <div className="mt-4">
+        <div className="mt-4 ">
           <Button
             className="btnCreateNew"
             leftIcon={<RiAddCircleLine />}

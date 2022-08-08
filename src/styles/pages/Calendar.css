@@ -109,13 +109,8 @@
   margin-bottom: 16px;
 }
 .introCard img {
-  width: 162px;
-  height: 109px;
-}
-.introCard {
-  display: flex;
-  align-items: center;
-  gap: 20px;
+  height: auto;
+  width: 50%;
 }
 .introCard h5 {
   font-size: 15px;
@@ -134,8 +129,27 @@
   border-color: var(--gray);
   color: var(--bs-gray-600);
   font-weight: 400;
-  margin-left: 8px;
+  margin-left: none;
   padding: 7.2px 14.4px;
+  margin-top: 10px;
+}
+@media (min-width: 398px) {
+  .btnLink {
+    margin-left: 8px;
+    margin-top: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .introCard {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+  .introCard img {
+    width: 162px;
+    height: 109px;
+  }
 }
 @media (min-width: 1200px) {
   .fc .fc-toolbar {
