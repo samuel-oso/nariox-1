@@ -23,6 +23,8 @@ body {
   --bs-gray-400: #4b4b5a;
   --bs-gray-500: #ebeef5;
   --bs-gray-600: #212529;
+  --bs-gray-700: #97a4af;
+  --bs-gray-800: #bdc5d1;
   --svg-fill: rgba(75, 75, 90, 0.12);
   --svg-active-fill: rgba(83, 105, 248, 0.12);
   --bs-gray-dark: #343a40;
@@ -37,11 +39,13 @@ body {
   --bg-chart-300: rgba(255, 92, 117, 0.18);
   --bg-400: #4254c6;
   --bg-500: #f8f9fa;
+  --bg-600: #424e5a;
   --success: #43d39e;
   --chart-100: #727cf5;
   --chart-200: #f77e53;
   --chart-300: #43d39e;
   --chart-400: #ffbe0b;
+  --chart-500: #d0def2;
 }
 .Appshell {
   background-color: var(--bg-body);
@@ -88,6 +92,28 @@ body {
 }
 .bg-warning {
   background-color: var(--chart-400);
+}
+.bg-light {
+  background-color: var(--chart-500);
+}
+.border-bottom {
+  border-bottom: 1px solid #e7eaf3 !important;
+}
+.rounded-circle {
+  border-radius: 50% !important;
+}
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+.list-inline-item {
+  display: inline-block;
+}
+.list-inline-item:not(:last-child) {
+  margin-right: 0.5rem;
+}
+.text-body {
+  color: #4a4f54 !important;
 }
 @media (min-width: 1024px) {
   .mantine-kv8twf {
