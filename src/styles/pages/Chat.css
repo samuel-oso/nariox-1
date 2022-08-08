@@ -6,22 +6,19 @@
   background-color: var(--white);
   margin-bottom: 24px;
 }
-.chat-search {
+.chatSearch {
   height: 70px;
-  display: table;
-  width: 100%;
-}
-.chat-search-box {
   display: table-cell;
   vertical-align: middle;
   position: relative;
+  width: 100vw;
 }
-.input-group {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-  width: 100%;
+.chatSearch input {
+  height: 37px;
+  background-color: var(--gray-100);
+  color: var(--bs-gray-dark);
+  border-radius: 4px;
+  border: none;
 }
 .form-control {
   padding: 0;

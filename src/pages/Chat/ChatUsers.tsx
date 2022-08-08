@@ -63,7 +63,7 @@ const ChatUsers = ({ onUserSelect }: ChatUsersProps) => {
   return (
     <>
       <div className="chatUsers-Card">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between border-bottom pb-3">
           <div className="chatUsers-Profile">
             <img
               src={profilePic}
@@ -82,21 +82,13 @@ const ChatUsers = ({ onUserSelect }: ChatUsersProps) => {
             />
           </div>
         </div>
-
-        <div>
-          <form className="chat-search">
-            <div className="chat-search-box">
-              <div className="input-group">
-                <Input
-                  type="search"
-                  className="form-control"
-                  placeholder="Search..."
-                  icon={<TbSearch />}
-                  onKeyUp={(e: any) => search(e.target.value)}
-                />
-              </div>
-            </div>
-          </form>
+        <div className="chatSearch">
+          <Input
+            type="search"
+            placeholder="Search..."
+            icon={<TbSearch />}
+            onKeyUp={(e: any) => search(e.target.value)}
+          />
         </div>
 
         <div className="pe-2">
