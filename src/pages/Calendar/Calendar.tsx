@@ -1,16 +1,49 @@
 import React, { useState } from "react";
 import "../../styles/pages/Calendar.css";
 import CalendarComponent from "./CalendarComponent";
+import calendarImage from "../../images/calendarImage.png";
 import "@fullcalendar/react";
 import { DateClickArg } from "@fullcalendar/interaction";
 import { EventClickArg, EventInput } from "@fullcalendar/core";
 import { defaultEvents } from "../../data/data";
 import AddEditEvent from "./AddEditEvent";
 import Layout from "../../components/Layout";
+import { Button } from "@mantine/core";
+import { RiAddCircleLine } from "react-icons/ri";
+import { TbRefresh } from "react-icons/tb";
 
 interface IntroCardProps {
   createNewEvent: () => void;
 }
+
+const IntroCard = ({ createNewEvent }: IntroCardProps) => {
+  return (
+    <div className="calendarCard introCard">
+      <img src={calendarImage} />
+      <div>
+        <h5>Welcome to Your Calendar</h5>
+        <p>
+          The calendar shows the events synced from all your linked calendars.
+          Click on event to see or edit the details. You can create new event by
+          clicking on "Create New event" button or any cell available in
+          calendar below.
+        </p>
+        <div className="mt-4">
+          <Button
+            className="btnCreateNew"
+            leftIcon={<RiAddCircleLine />}
+            onClick={createNewEvent}
+          >
+            Create New Event
+          </Button>
+          <Button className="btnLink" leftIcon={<TbRefresh />}>
+            Link Calendars
+          </Button>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const Calendar = () => {
   //  Handle Modal
@@ -89,6 +122,7 @@ const Calendar = () => {
   return (
     <Layout>
       <div className="main-container">
+        <IntroCard createNewEvent={createNewEvent} />
         <CalendarComponent
           onDateClick={onDateClick}
           onEventClick={onEventClick}

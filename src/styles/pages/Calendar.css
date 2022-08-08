@@ -104,6 +104,39 @@
   background-color: var(--success);
 }
 
+/* Intro card Styling */
+.introCard {
+  margin-bottom: 16px;
+}
+.introCard img {
+  width: 162px;
+  height: 109px;
+}
+.introCard {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.introCard h5 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--bs-gray-dark);
+}
+.introCard p {
+  color: var(--bs-gray-300);
+}
+.btnCreateNew {
+  background-color: var(--bs-primary);
+  font-weight: 400;
+  padding: 7.2px 14.4px;
+}
+.btnLink {
+  border-color: var(--gray);
+  color: var(--bs-gray-600);
+  font-weight: 400;
+  margin-left: 8px;
+  padding: 7.2px 14.4px;
+}
 @media (min-width: 1200px) {
   .fc .fc-toolbar {
     flex-direction: initial;
