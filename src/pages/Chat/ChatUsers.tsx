@@ -30,7 +30,6 @@ const ChatUsers = ({ onUserSelect }: ChatUsersProps) => {
   const ref = useClickOutside(() => {
     setDropdownOpen(!dropdownOpen);
   });
-
   const toggleDropdown = () => {
     setDropdownOpen(!dropdownOpen);
   };
@@ -63,12 +62,14 @@ const ChatUsers = ({ onUserSelect }: ChatUsersProps) => {
   return (
     <>
       <div className="chatUsers-Card">
+        {/* Profile Name & DropDown */}
         <div className="flex items-center justify-between border-bottom pb-3">
           <div className="chatUsers-Profile">
             <img
               src={profilePic}
               className="rounded-circle"
               height="48"
+              width="48"
               alt="ChatProfilePic"
             />
             <h5 className="">Micheal J</h5>
@@ -82,6 +83,8 @@ const ChatUsers = ({ onUserSelect }: ChatUsersProps) => {
             />
           </div>
         </div>
+
+        {/* Search for Each Chat */}
         <div className="chatSearch">
           <Input
             type="search"
@@ -91,7 +94,8 @@ const ChatUsers = ({ onUserSelect }: ChatUsersProps) => {
           />
         </div>
 
-        <div className="pe-2">
+        {/* List of each chat */}
+        <div className="fullUserList">
           {(user || []).map((user, index) => {
             return (
               <Link
@@ -103,7 +107,7 @@ const ChatUsers = ({ onUserSelect }: ChatUsersProps) => {
                 }}
               >
                 <div
-                  className={classNames("flex", "items-start", "p-2", {
+                  className={classNames("flex", "items-start", "p-2", "gap-3", {
                     "bg-light": user.id === selectedUser.id,
                   })}
                 >
@@ -113,25 +117,33 @@ const ChatUsers = ({ onUserSelect }: ChatUsersProps) => {
                         "bg-success": user.userStatus === "online",
                         "bg-danger": user.userStatus === "busy",
                         "bg-warning": user.userStatus === "away",
+                        "bg-away": user.userStatus === "offline",
                       })}
-                    ></span>
+                    />
                     <img
                       src={user.avatar}
                       className="rounded-circle"
                       height="48"
-                      alt=""
+                      width="58"
+                      alt="userchat"
                     />
                   </div>
-                  <div className="w-full overflow-hidden">
-                    <h5 className="mt-0 mb-0">
+                  <div className="w-full">
+                    <h5
+                      style={{ color: "var(--bs-gray-dark)" }}
+                      className="font-medium"
+                    >
                       <span className="float-right text-xs">
                         {user.lastMessageOn}
                       </span>
                       {user.name}
                     </h5>
-                    <p className="mt-1 mb-0">
+                    <p
+                      className="mt-1 mb-0"
+                      style={{ color: "var(--bs-gray-300)" }}
+                    >
                       {user.totalUnread !== 0 && (
-                        <span className="float-right bg-danger text-white">
+                        <span className="float-right bg-danger text-white px-1 rounded text-xs">
                           {user.totalUnread}
                         </span>
                       )}

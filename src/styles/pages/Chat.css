@@ -43,11 +43,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  gap: 15px;
-}
-.chatUsers-Profile img {
-  height: 48px !important;
-  width: 48px !important;
+  gap: 12px;
 }
 .chatUsers-Profile h5 {
   color: var(--bs-gray-dark);
@@ -73,4 +69,8 @@
 .chatProfile-Item:hover {
   background-color: var(--bg-gray-100);
   cursor: pointer;
+}
+.fullUserList {
+  max-height: 549px;
+  overflow-y: auto;
 }

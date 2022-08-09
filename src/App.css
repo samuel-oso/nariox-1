@@ -16,6 +16,7 @@ body {
   --red: red;
   --gray: #e2e7f1;
   --gray-100: #f1f3fa;
+  --gray-200: #ced4da;
   --black: #000000;
   --danger: #ff5c75;
   --bg-gray-100: #f6f6f7;
@@ -83,19 +84,22 @@ body {
   color: var(--chart-400);
 }
 .bg-success {
-  background-color: var(--success);
+  background-color: var(--success) !important;
 }
 .bg-danger {
-  background-color: var(--danger);
+  background-color: var(--danger) !important;
+}
+.bg-away {
+  background-color: var(--gray-200) !important;
 }
 .bg-primary {
-  background-color: var(--bs-primary);
+  background-color: var(--bs-primary) !important;
 }
 .bg-warning {
-  background-color: var(--chart-400);
+  background-color: var(--chart-400) !important;
 }
 .bg-light {
-  background-color: var(--chart-500);
+  background-color: var(--chart-500) !important;
 }
 .border-bottom {
   border-bottom: 1px solid #e7eaf3 !important;
