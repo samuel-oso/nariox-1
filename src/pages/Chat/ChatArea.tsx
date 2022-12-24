@@ -4,12 +4,22 @@ import { Link } from "react-router-dom";
 import { Card, Dropdown, Row, Col } from "react-bootstrap";
 import classNames from "classnames";
 import * as yup from "yup";
-import { Loader } from "@mantine/core";
+import { Loader, Center } from "@mantine/core";
 import { yupResolver } from "@hookform/resolvers/yup";
 import FormInput from "../../components/FormInput";
 import ProfileModal from "./ProfileModal";
 import VideocallModal from "./VideocallModal";
 import VoicecallModal from "./VoicecallModal";
+import { BsTelephonePlus } from "react-icons/bs";
+import { BsCameraVideo } from "react-icons/bs";
+import { TbDotsVertical } from "react-icons/tb";
+import { Paper, Collapse } from "@mantine/core";
+import { useClickOutside } from "@mantine/hooks";
+import { CgProfile } from "react-icons/cg";
+import { BsMusicNoteList } from "react-icons/bs";
+import { TbSearch } from "react-icons/tb";
+import { MdWallpaper } from "react-icons/md";
+import { BsArrowRightCircle } from "react-icons/bs";
 
 // default data
 import { CHATHISTORY, ChatUserType, ChatMessage, MessageItem } from "./data";
@@ -37,80 +47,91 @@ const ChatHeader = ({ selectedUser }: ChatHeaderProps) => {
   const handleVoicelModalClose = () => setShowVoicelModal(false);
   const handleVoicelModalShow = () => setShowVoicelModal(true);
 
+  const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
+  // close on click outside
+  const ref = useClickOutside(() => {
+    setDropdownOpen(!dropdownOpen);
+  });
+  const toggleDropdown = () => {
+    setDropdownOpen(!dropdownOpen);
+  };
+
   return (
     <>
-      <div className="d-flex pb-2 border-bottom align-items-center">
-        <img
-          src={selectedUser.avatar}
-          className="me-2 rounded-circle"
-          height="48"
-          alt=""
-        />
-        <div>
-          <h5 className="mt-0 mb-0 fs-14">{selectedUser.name}</h5>
-          <p className="mb-0">Online</p>
+      <div className="flex items-center justify-between">
+        <div className="flex items-center gap-3">
+          <img
+            src={selectedUser.avatar}
+            className="rounded-circle"
+            height="48"
+            width="48"
+            alt="ChatProfilePic"
+          />
+          <div>
+            <h5
+              style={{ color: "var(--bs-gray-dark)" }}
+              className="font-medium"
+            >
+              {selectedUser.name}
+            </h5>
+            <p style={{ color: "var(--bg-600)" }}>Online</p>
+          </div>
         </div>
-        <div className="flex-grow-1">
-          <ul className="list-inline float-end mb-0">
-            <Dropdown as="li" className="list-inline-item fs-18 me-3">
-              <Dropdown.Toggle
-                id="dropdown-apps"
-                as="a"
-                className="cursor-pointer text-dark"
-              >
-                <i
-                  className="bi bi-telephone-plus"
-                  onClick={() => handleVoicelModalShow()}
-                ></i>
-              </Dropdown.Toggle>
-            </Dropdown>
+        <div className="flex items-center gap-5">
+          <div
+            className="chatArea-icons"
+            onClick={() => handleVoicelModalShow()}
+          >
+            <BsTelephonePlus />
+          </div>
+          <div
+            className="chatArea-icons"
+            onClick={() => handleVideocallModalShow()}
+          >
+            <BsCameraVideo />
+          </div>
+          <div className="chatArea-icons">
+            <TbDotsVertical
+              onClick={toggleDropdown}
+              className={classNames("cursor-pointer text-lg", {
+                show: dropdownOpen,
+              })}
+            />
 
-            <Dropdown as="li" className="list-inline-item fs-18 me-3">
-              <Dropdown.Toggle
-                id="dropdown-apps"
-                as="a"
-                className="cursor-pointer text-dark"
-              >
-                <i
-                  className="bi bi-camera-video"
-                  onClick={() => handleVideocallModalShow()}
-                ></i>
-              </Dropdown.Toggle>
-            </Dropdown>
-
-            <Dropdown as="li" className="list-inline-item fs-18">
-              <Dropdown.Toggle
-                id="dropdown-apps"
-                as="a"
-                className="cursor-pointer text-dark"
-              >
-                <i className="bi bi-three-dots-vertical"></i>
-              </Dropdown.Toggle>
-
-              <Dropdown.Menu className="dropdown-menu-end">
-                <Dropdown.Item
-                  href="#/"
-                  onClick={() => handleProfileModalShow()}
+            {/* Collapse */}
+            {dropdownOpen && (
+              <Paper ref={ref}>
+                <Collapse
+                  in={dropdownOpen}
+                  className="chatAreaProfile-Collapse"
                 >
-                  {" "}
-                  <i className="bi bi-person-circle fs-18 me-2"></i>View Profile
-                </Dropdown.Item>
-                <Dropdown.Item href="#/">
-                  <i className="bi bi-music-note-list fs-18 me-2"></i>Media,
-                  Links and Docs
-                </Dropdown.Item>
-                <Dropdown.Item href="#/">
-                  <i className="bi bi-search fs-18 me-2"></i>Search
-                </Dropdown.Item>
-                <Dropdown.Item href="#/">
-                  <i className="bi bi-image fs-18 me-2"></i>Wallpaper
-                </Dropdown.Item>
-                <Dropdown.Item href="#/">
-                  <i className="bi bi-arrow-right-circle fs-18 me-2"></i>More
-                </Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-          </ul>
+                  <div
+                    onClick={() => handleProfileModalShow()}
+                    className="chatProfile-Item"
+                  >
+                    <CgProfile />
+                    <p>View Profile</p>
+                  </div>
+                  <div className="chatProfile-Item">
+                    <BsMusicNoteList />
+                    <p>Media, Links and Docs</p>
+                  </div>
+                  <div className="chatProfile-Item">
+                    <TbSearch />
+                    <p>Search</p>
+                  </div>
+                  <div className="chatProfile-Item">
+                    <MdWallpaper />
+                    <p>Wallpaper</p>
+                  </div>
+                  <div className="chatProfile-Item">
+                    <BsArrowRightCircle />
+                    <p>More</p>
+                  </div>
+                </Collapse>
+              </Paper>
+            )}
+          </div>
         </div>
       </div>
 
@@ -149,15 +170,15 @@ const UserMessage = ({ message, toUser }: UserMessageProps) => {
             key={index}
             className={classNames("clearfix", {
               odd: message.from.id === toUser.id,
-              "mb-1":
+              "mb-1 odd":
                 message.messages.length > 1 &&
                 index !== message.messages.length - 1,
             })}
           >
-            <div className="conversation-text ms-0">
+            <div className="conversation-text ml-0">
               <div
-                className={classNames("d-flex", {
-                  "justify-content-end": message.from.id === toUser.id,
+                className={classNames("flex", {
+                  "justify-end": message.from.id === toUser.id,
                 })}
               >
                 {message.from.id === toUser.id && (
@@ -349,85 +370,93 @@ const ChatArea = ({ selectedUser }: ChatAreaProps) => {
 
   return (
     <>
-      <Card>
-        <Card.Body>
-          {loading && <Loader />}
-          <ChatHeader selectedUser={selectedUser} />
-
-          <div className="mt-1">
-            <div>
-              <ul className="conversation-list px-0 h-100">
-                {(chatHistory || []).map((item, index) => {
-                  return (
-                    <React.Fragment key={index}>
-                      <li className="position-relative">
-                        <hr />
-                        <h4>
-                          <span className="badge bg-light text-dark position-absolute top-0 start-50 translate-middle">
-                            {item.day}
-                          </span>
-                        </h4>
-                      </li>
-                      {(item.messages || []).map((message, index) => {
-                        return (
-                          <UserMessage
-                            key={index}
-                            message={message}
-                            toUser={toUser}
-                          />
-                        );
-                      })}
-                    </React.Fragment>
-                  );
-                })}
-              </ul>
-            </div>
-
-            <div className="mt-2 bg-light p-3 rounded">
-              <form
-                noValidate
-                name="chat-form"
-                id="chat-form"
-                onSubmit={handleSubmit(sendChatMessage)}
-              >
-                <div className="row">
-                  <div className="col mb-2 mb-sm-0">
-                    <FormInput
-                      type="text"
-                      name="newMessage"
-                      className="border-0"
-                      placeholder="Enter your text"
-                      register={register}
-                      key="newMessage"
-                      errors={errors}
-                      control={control}
-                    />
-                  </div>
-                  <div className="col-sm-auto">
-                    <div className="btn-group">
-                      <Link to="#" className="btn btn-light">
-                        <i className="bi bi-emoji-smile fs-18"></i>
-                      </Link>
-                      <Link to="#" className="btn btn-light">
-                        <i className="bi bi-paperclip fs-18"></i>
-                      </Link>
-                      <Link to="#" className="btn btn-light">
-                        <i className="bi bi-camera fs-18"></i>
-                      </Link>
-                      <button
-                        type="submit"
-                        className="btn btn-success chat-send"
-                      >
-                        <i className="uil uil-message"></i>
-                      </button>
+      <div className="chatCard">
+        {loading ? (
+          <Center
+            style={{
+              width: "100%",
+              minHeight: 680,
+            }}
+          >
+            {loading && <Loader />}
+          </Center>
+        ) : (
+          <>
+            <ChatHeader selectedUser={selectedUser} />
+            <div className="mt-1">
+              <div>
+                <ul className="conversation-list px-0 h-100">
+                  {(chatHistory || []).map((item, index) => {
+                    return (
+                      <React.Fragment key={index}>
+                        <li className="position-relative">
+                          <hr />
+                          <h4>
+                            <span className="badge bg-light text-dark position-absolute top-0 start-50 translate-middle">
+                              {item.day}
+                            </span>
+                          </h4>
+                        </li>
+                        {(item.messages || []).map((message, index) => {
+                          return (
+                            <UserMessage
+                              key={index}
+                              message={message}
+                              toUser={toUser}
+                            />
+                          );
+                        })}
+                      </React.Fragment>
+                    );
+                  })}
+                </ul>
+              </div>
+              <div className="mt-2 bg-light p-3 rounded">
+                <form
+                  noValidate
+                  name="chat-form"
+                  id="chat-form"
+                  onSubmit={handleSubmit(sendChatMessage)}
+                >
+                  <div className="row">
+                    <div className="col mb-2 mb-sm-0">
+                      <FormInput
+                        type="text"
+                        name="newMessage"
+                        className="border-0"
+                        placeholder="Enter your text"
+                        register={register}
+                        key="newMessage"
+                        errors={errors}
+                        control={control}
+                      />
+                    </div>
+                    <div className="col-sm-auto">
+                      <div className="btn-group">
+                        <Link to="#" className="btn btn-light">
+                          <i className="bi bi-emoji-smile fs-18"></i>
+                        </Link>
+                        <Link to="#" className="btn btn-light">
+                          <i className="bi bi-paperclip fs-18"></i>
+                        </Link>
+                        <Link to="#" className="btn btn-light">
+                          <i className="bi bi-camera fs-18"></i>
+                        </Link>
+                        <button
+                          type="submit"
+                          className="btn btn-success chat-send"
+                        >
+                          <i className="uil uil-message"></i>
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </form>
+                </form>
+              </div>
             </div>
-          </div>
-        </Card.Body>
-      </Card>
+          </>
+        )}
+      </div>
     </>
   );
 };

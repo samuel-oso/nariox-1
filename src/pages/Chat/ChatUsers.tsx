@@ -61,7 +61,7 @@ const ChatUsers = ({ onUserSelect }: ChatUsersProps) => {
 
   return (
     <>
-      <div className="chatUsers-Card">
+      <div className="chatCard">
         {/* Profile Name & DropDown */}
         <div className="flex items-center justify-between border-bottom pb-3">
           <div className="chatUsers-Profile">
